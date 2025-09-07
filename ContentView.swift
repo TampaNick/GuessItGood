@@ -179,20 +179,20 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        if viewModel.isFirstTurn && viewModel.phase == .waitingForWheel && !viewModel.showWheel {
-            VStack {
-                Spacer()
-                Button("Wheel") {
-                    viewModel.showWheel = true
+            if viewModel.isFirstTurn && viewModel.phase == .waitingForWheel && !viewModel.showWheel {
+                          VStack {
+                              Spacer()
+                              Button("Wheel") {
+                                  viewModel.showWheel = true
+                              }
+                              .font(.headline)
+                              .foregroundColor(.white)
+                              .padding(.horizontal, 20)
+                              .padding(.vertical, 10)
+                              .background(Color.orange)
+                              .cornerRadius(8)
+                              .padding(.bottom, 20)
                 }
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color.orange)
-                .cornerRadius(8)
-                .padding(.bottom, 20)
             }
         }
             .sheet(isPresented: $viewModel.showWheel) {
@@ -210,7 +210,7 @@ struct ContentView: View {
     
     
     
-    
+  
     struct CustomKeyboardView: View {
         @State private var pressedKey: Character? = nil
         @State private var guessedKeys: Set<Character> = []
@@ -339,16 +339,16 @@ struct ContentView: View {
                 return Color.blue
             }
         }
+        
     }
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-                .environmentObject(GameViewModel()) // Add this line
-            
+        
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+                    .environmentObject(GameViewModel()) // Add this line
+                
+            }
         }
+        
     }
-    
-}
 
