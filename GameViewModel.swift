@@ -198,13 +198,9 @@ class GameViewModel: ObservableObject {
     func spinWheel() {
         phase = .spinning
         isFirstTurn = false
-        let outcomes: [WheelOutcome] = [.points(100), .points(200), .points(300), .clue]
-        if let result = outcomes.randomElement() {
-            handleWheelStop(result)
-        }
     }
 
-    private func handleWheelStop(_ outcome: WheelOutcome) {
+    func handleWheelStop(_ outcome: WheelOutcome) {
         switch outcome {
         case .points(let value):
             currentWheelValue = value
