@@ -55,6 +55,20 @@ class GameViewModel: ObservableObject {
     @Published var isPlayAgainButtonEnabled: Bool = false
     @Published var gameInProgress: Bool = false // New property
     @Published var isAdShown = false // New flag
+
+    enum TurnPhase {
+        case idle
+        case waitingForWheel
+        case spinning
+        case resolving
+        case guessing
+    }
+
+    @Published var phase: TurnPhase = .idle
+    @Published var showWheel: Bool = false
+    @Published var showClue: Bool = false
+    @Published var currentWheelValue: Int?
+    @Published var speakWheelResult: Bool = false
     
     // Call this when the game starts
         func resetClueButton() {
@@ -67,7 +81,7 @@ class GameViewModel: ObservableObject {
         categoryRevealed = true
 
         if isSpeechEnabled {
-            speechManager.speak("The category is \(category).")
+            speechManager.speak("The clue is \(category).")
         }
     }
     
@@ -89,15 +103,16 @@ class GameViewModel: ObservableObject {
             }
         }
     }
+    //This may still be needed to calculate score.
     private let letterScores: [Character: Int] = [
-        "A": -10, "E": -10, "I": -10, "O": -10, "U": -10,
-        "L": 250, "N": 250, "R": 250, "S": 250, "T": 250,
-        "D": 250, "G": 250,
-        "B": 250, "C": 250, "M": 250, "P": 250,
-        "F": 250, "H": 250, "V": 250, "W": 250, "Y": 250,
-        "K": 250, "J": 250, "X": 250,
-        "Q": 250, "Z": 250
-    ]
+            "A": -10, "E": -10, "I": -10, "O": -10, "U": -10,
+            "L": 250, "N": 250, "R": 250, "S": 250, "T": 250,
+            "D": 250, "G": 250,
+            "B": 250, "C": 250, "M": 250, "P": 250,
+            "F": 250, "H": 250, "V": 250, "W": 250, "Y": 250,
+            "K": 250, "J": 250, "X": 250,
+            "Q": 250, "Z": 250
+        ]
     
     private var phrases: [Phrase] = []
     var gridSize = 12
@@ -148,6 +163,55 @@ class GameViewModel: ObservableObject {
             }
             print("Phrase is: \(phrase)")
         }
+
+    enum WheelOutcome {
+        case points(Int)
+        case clue
+    }
+
+    func startNewTurn() {
+        phase = .waitingForWheel
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showWheel = true
+        }
+    }
+
+    func spinWheel() {
+        phase = .spinning
+        let outcomes: [WheelOutcome] = [.points(100), .points(200), .points(300), .clue]
+        if let result = outcomes.randomElement() {
+            handleWheelStop(result)
+        }
+    }
+
+    private func handleWheelStop(_ outcome: WheelOutcome) {
+        switch outcome {
+        case .points(let value):
+            currentWheelValue = value
+            if speakWheelResult {
+                speechManager.speak("You landed on \(value)")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWheel = false
+                self.phase = .guessing
+            }
+        case .clue:
+            revealCategory()
+            showClue = true
+            if speakWheelResult {
+                speechManager.speak("You landed on clue")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWheel = false
+                self.phase = .resolving
+            }
+        }
+    }
+
+    func dismissClue() {
+        showClue = false
+        phase = .guessing
+    }
     
 
   
@@ -186,27 +250,28 @@ class GameViewModel: ObservableObject {
         
         
         guessedLetters.insert(letter)
-        
+
         let occurrences = activeIndices.values.filter { $0 == letter }.count
-        
+
         if occurrences > 0 {
             playSound(named: "Ding")
             if isSpeechEnabled { // Check if speech is enabled before speaking
                 speechManager.speak("\(occurrences) \(occurrences == 1 ? "letter" : "letters") \(letter).")
             }
-            let letterScore = activeIndices.values.filter { $0 == letter }
-                .map { letterScores[$0, default: 0] }
-                .reduce(0, +)
-            
-            if let currentPlayer = currentPlayer, let index = players.firstIndex(where: { $0.id == currentPlayer.id }) {
-                players[index].totalScore += letterScore
+            if let currentPlayer = currentPlayer,
+               let index = players.firstIndex(where: { $0.id == currentPlayer.id }),
+               let wheelValue = currentWheelValue {
+                players[index].totalScore += wheelValue
             }
+            currentWheelValue = nil
         } else {
             playSound(named: "Buzzer", withExtension: "wav")
             if isSpeechEnabled { // Check if speech is enabled before speaking
                 speechManager.speak("No \(letter).")
             }
             moveToNextPlayer()
+            currentWheelValue = nil
+            startNewTurn()
         }
         
         if checkIfGameSolved() {
@@ -279,6 +344,9 @@ class GameViewModel: ObservableObject {
         
         // Debug information
         print("Game Initialized. Active Indices: \(activeIndices.keys.sorted())")
+        phase = .idle
+        showWheel = false
+        currentWheelValue = nil
     }
     
     

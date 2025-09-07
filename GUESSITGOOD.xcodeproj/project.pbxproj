@@ -23,6 +23,7 @@
 		A8796B1E2D26FEFD00C79DF2 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */; };
 		A8796B1F2D26FEFD00C79DF2 /* GUESSITGOODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */; };
 		A8AF29F22D210EA000DE537F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF29F12D210E8C00DE537F /* SpeechManager.swift */; };
+		A8BD84B92E6E27FA000DC091 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD84B82E6E27FA000DC091 /* WheelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUESSITGOODApp.swift; sourceTree = "<group>"; };
 		A8AF29F12D210E8C00DE537F /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		A8BD84B82E6E27FA000DC091 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
 		A8EB4CC22D0C70A6003971D8 /* GUESSITGOOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUESSITGOOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,24 +87,25 @@
 		A8EB4CB92D0C70A6003971D8 = {
 			isa = PBXGroup;
 			children = (
-				A86CE4F02D48270800B81E9F /* ClueButtonView.swift */,
-				A83B1E442D35F4DB008C9E26 /* SolvingView.swift */,
-				A83B1E422D35F3AD008C9E26 /* GamePlayView.swift */,
-				A83B1E402D35ED85008C9E26 /* QuickStartView.swift */,
-				A83B1E102D322470008C9E26 /* HamburgerMenu.swift */,
-				A83B1E0E2D3219D9008C9E26 /* UserGuideView.swift */,
-				A83B1E0C2D32194C008C9E26 /* MenuView.swift */,
 				A86C3C692D2E1AAF003237CE /* AdManager.swift */,
 				A86C3C672D2E1A42003237CE /* AppDelegate.swift */,
-				A81D72A32D2A392600C945ED /* StartFields.swift */,
-				A81D72A12D2A38F200C945ED /* GameBoard.swift */,
-				A8AF29F12D210E8C00DE537F /* SpeechManager.swift */,
+				A86CE4F02D48270800B81E9F /* ClueButtonView.swift */,
 				A8796B142D26FEFD00C79DF2 /* ContentView.swift */,
+				A81D72A12D2A38F200C945ED /* GameBoard.swift */,
+				A83B1E422D35F3AD008C9E26 /* GamePlayView.swift */,
 				A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */,
-				A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */,
-				A88748682D11EFC0006A579F /* Resources */,
 				A8EB4CC42D0C70A6003971D8 /* GUESSITGOOD */,
+				A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */,
+				A83B1E102D322470008C9E26 /* HamburgerMenu.swift */,
+				A83B1E0C2D32194C008C9E26 /* MenuView.swift */,
 				A8EB4CC32D0C70A6003971D8 /* Products */,
+				A83B1E402D35ED85008C9E26 /* QuickStartView.swift */,
+				A88748682D11EFC0006A579F /* Resources */,
+				A83B1E442D35F4DB008C9E26 /* SolvingView.swift */,
+				A8AF29F12D210E8C00DE537F /* SpeechManager.swift */,
+				A81D72A32D2A392600C945ED /* StartFields.swift */,
+				A83B1E0E2D3219D9008C9E26 /* UserGuideView.swift */,
+				A8BD84B82E6E27FA000DC091 /* WheelView.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +206,7 @@
 				A83B1E412D35ED95008C9E26 /* QuickStartView.swift in Sources */,
 				A83B1E0D2D321954008C9E26 /* MenuView.swift in Sources */,
 				A86C3C682D2E1A56003237CE /* AppDelegate.swift in Sources */,
+				A8BD84B92E6E27FA000DC091 /* WheelView.swift in Sources */,
 				A81D72A42D2A393600C945ED /* StartFields.swift in Sources */,
 				A86CE4F12D48271300B81E9F /* ClueButtonView.swift in Sources */,
 				A8796B1E2D26FEFD00C79DF2 /* GameViewModel.swift in Sources */,
