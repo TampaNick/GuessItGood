@@ -20,56 +20,71 @@ struct WheelView: View {
             let fullSize = min(geometry.size.width, geometry.size.height) * 0.8
             let sideWidth = fullSize * 0.1
             let wheelSize = fullSize - sideWidth
+            let pointerSize = sideWidth
 
             VStack(spacing: 20) {
                 ZStack {
-                    // Draw side band that continues each wedge color
-                    ForEach(0..<segments.count, id: \.self) { index in
-                        WheelSideSlice(startAngle: .degrees(Double(index)/Double(segments.count) * 360),
-                                       endAngle: .degrees(Double(index + 1)/Double(segments.count) * 360),
-                                       thickness: sideWidth)
-                            .fill(segments[index].0)
-                    }
-                    // Draw top of wheel
                     ZStack {
+                        // Draw side band that continues each wedge color
                         ForEach(0..<segments.count, id: \.self) { index in
-                            WheelSlice(startAngle: .degrees(Double(index)/Double(segments.count) * 360),
-                                       endAngle: .degrees(Double(index + 1)/Double(segments.count) * 360))
+                            WheelSideSlice(startAngle: .degrees(Double(index)/Double(segments.count) * 360),
+                                           endAngle: .degrees(Double(index + 1)/Double(segments.count) * 360),
+                                           thickness: sideWidth)
                                 .fill(segments[index].0)
                         }
-                        ForEach(0..<segments.count, id: \.self) { index in
-                            Text(segments[index].1)
-                                .font(.caption)
-                                .foregroundColor(.black)
-                                .rotationEffect(.degrees(-rotation))
-                                .position(position(for: index, in: wheelSize))
-                        }
-                    }
-                    .frame(width: wheelSize, height: wheelSize)
-                }
-                .frame(width: fullSize, height: fullSize)
-                .rotationEffect(.degrees(rotation))
-               
-                Button("Spin") {
-                                    let spinAmount = Double.random(in: 720...1440)
-                                    withAnimation(.easeOut(duration: 2)) {
-                                        rotation += spinAmount
-                                    }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                        viewModel.spinWheel()
-                                    }
-                                }
-                                .disabled(viewModel.phase == .spinning)
-                                .padding()
-                                .background(Color.orange)
-                                .foregroundColor(.white)
-                                .cornerRadius(8)
+                        // Draw top of wheel
+                        ZStack {
+                            ForEach(0..<segments.count, id: \.self) { index in
+                                WheelSlice(startAngle: .degrees(Double(index)/Double(segments.count) * 360),
+                                           endAngle: .degrees(Double(index + 1)/Double(segments.count) * 360))
+                                    .fill(segments[index].0)
                             }
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color.white)
+                            ForEach(0..<segments.count, id: \.self) { index in
+                                Text(segments[index].1)
+                                    .font(.caption)
+                                    .foregroundColor(.black)
+                                    .rotationEffect(.degrees(-rotation))
+                                    .position(position(for: index, in: wheelSize))
+                            }
                         }
+                        .frame(width: wheelSize, height: wheelSize)
                     }
+                    .frame(width: fullSize, height: fullSize)
+                    .rotationEffect(.degrees(rotation))
+
+                    WheelPointer()
+                        .fill(Color.black)
+                        .frame(width: pointerSize, height: pointerSize)
+                        .offset(y: -(fullSize / 2 + pointerSize / 2))
+                }
+
+                Button("Spin") {
+                    viewModel.spinWheel()
+                    let spinAmount = Double.random(in: 720...1440)
+                    withAnimation(.easeOut(duration: 2)) {
+                        rotation += spinAmount
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        let normalized = rotation.truncatingRemainder(dividingBy: 360)
+                        let adjusted = (360 - normalized + 90).truncatingRemainder(dividingBy: 360)
+                        let segmentSize = 360.0 / Double(segments.count)
+                        let index = Int(adjusted / segmentSize) % segments.count
+                        let value = segments[index].1
+                        let outcome: GameViewModel.WheelOutcome = value == "CLUE" ? .clue : .points(Int(value) ?? 0)
+                        viewModel.handleWheelStop(outcome)
+                    }
+                }
+                .disabled(viewModel.phase == .spinning)
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
+        }
+    }
 
     private func position(for index: Int, in size: CGFloat) -> CGPoint {
         let angle = (Double(index) + 0.5) / Double(segments.count) * 2 * .pi
@@ -117,6 +132,17 @@ struct WheelSideSlice: Shape {
                     startAngle: endAngle,
                     endAngle: startAngle,
                     clockwise: true)
+        path.closeSubpath()
+        return path
+    }
+}
+
+struct WheelPointer: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
         path.closeSubpath()
         return path
     }
