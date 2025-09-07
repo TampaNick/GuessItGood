@@ -1,0 +1,4258 @@
+[
+        {
+            "phrase": "Peter Piper picked some pickled peppers",
+            "category": "Tongue Twister"
+        },
+        {
+            "phrase": "She sells sea shells by the seashore",
+            "category": "Tongue Twister"
+        },
+        {
+            "phrase": "The quick brown fox jumps over the lazy dog",
+            "category": "Typing Exercise"
+        },
+        {
+            "phrase": "How much wood would a woodchuck chuck",
+            "category": "Riddle"
+        },
+        {
+            "phrase": "A journey of a thousand miles begins with a single step",
+            "category": "Proverb"
+        },
+        {
+            "phrase": "A COZY ARMCHAIR",
+            "category": "Around The House"
+        },
+        {
+            "phrase": "FAMILY PHOTO ALBUM",
+            "category": "Around The House"
+        },
+        {
+            "phrase": "KITCHEN UTENSILS",
+            "category": "Around The House"
+        },
+        {
+            "phrase": "PLUSH THROW PILLOW",
+            "category": "Around The House"
+        },
+        {
+            "phrase": "WALL MOUNTED BOOKSHELF",
+            "category": "Around The House"
+        },
+        {
+            "phrase": "BREAKFAST IN BED AND BREAKFAST",
+            "category": "Before And After"
+        },
+        {
+            "phrase": "SWEET DREAMS ARE MADE OF CHEESE",
+            "category": "Before And After"
+        },
+        {
+            "phrase": "APPLE PIE CHART",
+            "category": "Before And After"
+        },
+        {
+            "phrase": "COLD TURKEY SANDWICH",
+            "category": "Before And After"
+        },
+        {
+            "phrase": "PAPER TRAIL MIX",
+            "category": "Before And After"
+        },
+        {
+            "phrase": "TO KILL A MOCKINGBIRD",
+            "category": "Book Title"
+        },
+        {
+            "phrase": "PRIDE AND PREJUDICE",
+            "category": "Book Title"
+        },
+        {
+            "phrase": "THE GREAT GATSBY",
+            "category": "Book Title"
+        },
+        {
+            "phrase": "MOBY DICK",
+            "category": "Book Title"
+        },
+        {
+            "phrase": "WAR AND PEACE",
+            "category": "Book Title"
+        },
+        {
+            "phrase": "SHERLOCK HOLMES",
+            "category": "Character"
+        },
+        {
+            "phrase": "HARRY POTTER",
+            "category": "Character"
+        },
+        {
+            "phrase": "ELIZABETH BENNET",
+            "category": "Character"
+        },
+        {
+            "phrase": "JAY GATSBY",
+            "category": "Character"
+        },
+        {
+            "phrase": "HOLDEN CAULFIELD",
+            "category": "Character"
+        },
+        {
+            "phrase": "CASABLANCA",
+            "category": "Classic Movie"
+        },
+        {
+            "phrase": "GONE WITH THE WIND",
+            "category": "Classic Movie"
+        },
+        {
+            "phrase": "CITIZEN KANE",
+            "category": "Classic Movie"
+        },
+        {
+            "phrase": "THE WIZARD OF OZ",
+            "category": "Classic Movie"
+        },
+        {
+            "phrase": "SINGIN IN THE RAIN",
+            "category": "Classic Movie"
+        },
+        {
+            "phrase": "I LOVE LUCY",
+            "category": "Classic TV"
+        },
+        {
+            "phrase": "THE TWILIGHT ZONE",
+            "category": "Classic TV"
+        },
+        {
+            "phrase": "GILLIGANS ISLAND",
+            "category": "Classic TV"
+        },
+        {
+            "phrase": "THE ANDY GRIFFITH SHOW",
+            "category": "Classic TV"
+        },
+        {
+            "phrase": "M A S H",
+            "category": "Classic TV"
+        },
+        {
+            "phrase": "STUDYING FOR EXAMS",
+            "category": "College Life"
+        },
+        {
+            "phrase": "ATTENDING LECTURES",
+            "category": "College Life"
+        },
+        {
+            "phrase": "JOINING A FRATERNITY",
+            "category": "College Life"
+        },
+        {
+            "phrase": "DORM ROOM DECORATING",
+            "category": "College Life"
+        },
+        {
+            "phrase": "PARTICIPATE IN INTRAMURAL SPORTS",
+            "category": "College Life"
+        },
+        {
+            "phrase": "GRADUATION CEREMONY",
+            "category": "Event"
+        },
+        {
+            "phrase": "WEDDING RECEPTION",
+            "category": "Event"
+        },
+        {
+            "phrase": "MUSIC FESTIVAL",
+            "category": "Event"
+        },
+        {
+            "phrase": "CHARITY FUNDRAISER",
+            "category": "Event"
+        },
+        {
+            "phrase": "MARATHON RACE",
+            "category": "Event"
+        },
+        {
+            "phrase": "FAMILY GAME NIGHT",
+            "category": "Family"
+        },
+        {
+            "phrase": "SUNDAY DINNER",
+            "category": "Family"
+        },
+        {
+            "phrase": "COUSINS REUNION",
+            "category": "Family"
+        },
+        {
+            "phrase": "PARENTS ANNIVERSARY",
+            "category": "Family"
+        },
+        {
+            "phrase": "SIBLING RIVALRY",
+            "category": "Family"
+        },
+        {
+            "phrase": "LUKE SKYWALKER",
+            "category": "Fictional Character"
+        },
+        {
+            "phrase": "WONDER WOMAN",
+            "category": "Fictional Character"
+        },
+        {
+            "phrase": "FRODO BAGGINS",
+            "category": "Fictional Character"
+        },
+        {
+            "phrase": "KATNISS EVERDEEN",
+            "category": "Fictional Character"
+        },
+        {
+            "phrase": "TONY STARK",
+            "category": "Fictional Character"
+        },
+        {
+            "phrase": "HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY",
+            "category": "Fictional Place"
+        },
+        {
+            "phrase": "NARNIA",
+            "category": "Fictional Place"
+        },
+        {
+            "phrase": "MIDDLE EARTH",
+            "category": "Fictional Place"
+        },
+        {
+            "phrase": "WAKANDA",
+            "category": "Fictional Place"
+        },
+        {
+            "phrase": "SPRINGFIELD",
+            "category": "Fictional Place"
+        },
+        {
+            "phrase": "SPAGHETTI AND MEATBALLS",
+            "category": "Food And Drink"
+        },
+        {
+            "phrase": "CHOCOLATE CHIP COOKIES",
+            "category": "Food And Drink"
+        },
+        {
+            "phrase": "MARGARITA COCKTAIL",
+            "category": "Food And Drink"
+        },
+        {
+            "phrase": "CAESAR SALAD",
+            "category": "Food And Drink"
+        },
+        {
+            "phrase": "BLUEBERRY MUFFINS",
+            "category": "Food And Drink"
+        },
+        {
+            "phrase": "PLAYING BOARD GAMES",
+            "category": "Fun And Games"
+        },
+        {
+            "phrase": "KICKING A SOCCER BALL",
+            "category": "Fun And Games"
+        },
+        {
+            "phrase": "SOLVING A JIGSAW PUZZLE",
+            "category": "Fun And Games"
+        },
+        {
+            "phrase": "RIDING A ROLLER COASTER",
+            "category": "Fun And Games"
+        },
+        {
+            "phrase": "BUILDING A SANDCASTLE",
+            "category": "Fun And Games"
+        },
+        {
+            "phrase": "LOCAL MAN WINS LOTTERY",
+            "category": "Headline"
+        },
+        {
+            "phrase": "NEW PARK OPENS DOWNTOWN",
+            "category": "Headline"
+        },
+        {
+            "phrase": "SCIENTISTS DISCOVER NEW SPECIES",
+            "category": "Headline"
+        },
+        {
+            "phrase": "ELECTION RESULTS ANNOUNCED",
+            "category": "Headline"
+        },
+        {
+            "phrase": "COMMUNITY RALLIES FOR CHARITY",
+            "category": "Headline"
+        },
+        {
+            "phrase": "JOHN AND YOKO",
+            "category": "Husband And Wife"
+        },
+        {
+            "phrase": "BARACK AND MICHELLE OBAMA",
+            "category": "Husband And Wife"
+        },
+        {
+            "phrase": "DAVID AND VICTORIA BECKHAM",
+            "category": "Husband And Wife"
+        },
+        {
+            "phrase": "JAY Z AND BEYONCE",
+            "category": "Husband And Wife"
+        },
+        {
+            "phrase": "PRINCE HARRY AND MEGHAN MARKLE",
+            "category": "Husband And Wife"
+        },
+        {
+            "phrase": "SPIDER MAN HOMECOMING",
+            "category": "Movie Title"
+        },
+        {
+            "phrase": "PLEASE PAY CLOSE ATTENTION",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PENC",
+            "category": "Back to School"
+        },
+        {
+            "phrase": "LIVE REGGAE MUSIC",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "TOOLS FOR SUCCESS",
+            "category": "Things"
+        },
+        {
+            "phrase": "GRADING PAPERS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "UNPACKING BAGS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "FOLLOWING DIRECTIONS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "I THINK I CAN I THINK I CAN",
+            "category": "Quotation"
+        },
+        {
+            "phrase": "NEAPOLITAN CHEESECAKE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "REPORT CARD SHUFFLER",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "OUR MAN IN HAVANA",
+            "category": "Title"
+        },
+        {
+            "phrase": "MILK MONEY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "IT WAS INEVITABLE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "HOUSE PARTY",
+            "category": "Event"
+        },
+        {
+            "phrase": "SCHOOL OF ROCK",
+            "category": "Title"
+        },
+        {
+            "phrase": "GAINING TRACTION",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "TOTAL ECLIPSE OF THE HEART",
+            "category": "The 80's"
+        },
+        {
+            "phrase": "COOL SOOTHING TRADE WINDS",
+            "category": "Things"
+        },
+        {
+            "phrase": "CHEYENNE WYOMING",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "DOUBLE CHECK YOUR WORK",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "GOLD ALBUM",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "LET THE WILD RUMPUS START",
+            "category": "Quotation"
+        },
+        {
+            "phrase": "MOCK ELECTION",
+            "category": "Event"
+        },
+        {
+            "phrase": "GRADUATION CAP AND GOWN",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "TAKING THE DUNE BUGGY FOR A SPIN",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "COLLEGE CAMPUS",
+            "category": "Place"
+        },
+        {
+            "phrase": "SNAPPY COMEBACK",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BROWSING AROUND",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PLAYS WELL WITH OTHERS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BOOK NOOK",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "THROWING PAPER AIRPLANES",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "IVY AND FANTASY LEAGUE",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "AMAZING SAILING DESTINATION",
+            "category": "Place"
+        },
+        {
+            "phrase": "DIARY OF A WIMPY KID",
+            "category": "Title"
+        },
+        {
+            "phrase": "AFTERNOON SNACK",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "FRIENDLY DISPOSITION",
+            "category": "Thing"
+        },
+        {
+            "phrase": "MOVIE POSTER",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "ANCIENT AZTECS",
+            "category": "People"
+        },
+        {
+            "phrase": "A GREAT LOCATION",
+            "category": "Place"
+        },
+        {
+            "phrase": "DARK CHOCOLATE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "FANCY FLUFFY PILLOWS",
+                "category": "Around the House"
+        },
+        {
+            "phrase": "A TRULY MEMORABLE MOMENT",
+            "category": "Thing"
+        },
+        {
+            "phrase": "WOODEN RACQUETS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "MIXING AND MATCHING",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "A GROUP OF KIDS",
+            "category": "People"
+        },
+        {
+            "phrase": "PRIVATE PATIO",
+            "category": "Place"
+        },
+        {
+            "phrase": "GRAPEFRUIT JUICE",
+            "category": "Food and  Drink"
+        },
+        {
+            "phrase": "COOLING DOWN AFTER A LONG HIKE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SEA TURTLES AND HUMPBACK WHALES",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "ACTIVE LIFESTYLE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "STRIKES AND SPARES",
+                "category": "Fun and Games"
+        },
+        {
+            "phrase": "PLAYFUL GREYHOUND",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "RECORDING ARTIST",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "COOKIES FRESH OUT OF THE OVEN",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "CLEAN COMFORTABLE CONVENIENT",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "TAKING A PEDAL BOAT ON THE BAY",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "A FAST LEARNER",
+            "category": "Person"
+        },
+        {
+            "phrase": "STICKING TO THE PLAN",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "EVIL WIZARD",
+            "category": "Character"
+        },
+        {
+            "phrase": "FRAGRANT FLOWERS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "FAIRBANKS ALASKA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "RIDING BIKES AROUND TOWN",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "NEVER GONNA GIVE YOU UP NEVER GONNA LET YOU DOWN",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "A WHOLE LOT OF NOTHING",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "EXTRA LITTLE TOUCHES",
+            "category": "Things"
+        },
+        {
+            "phrase": "APRICOT MARMALADE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "HOW SWEET IT IS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BROWN CORDUROY",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "BREAD PUDDING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "STOMACH CRUNCHES",
+            "category": "Things"
+        },
+        {
+            "phrase": "YOU ARE CORDIALLY INVITED",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "POPEYE THE SAILOR MAN",
+            "category": "Character"
+        },
+        {
+            "phrase": "SALAD SPINNER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "DOG GROOMER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "FALLING LEAVES",
+            "category": "Things"
+        },
+        {
+            "phrase": "THRILLS and SPILLS",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "SQUIRRELS COLLECTING NUTS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "UNSUNG HERO SANDWICH",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "IMMERSING MYSELF IN NATURE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "A FORK IN THE ROAD",
+            "category": "Place"
+        },
+        {
+            "phrase": "MOST LIKELY TO SUCCEED",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LINEN TABLECLOTH",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "JOB PROMOTION",
+            "category": "Event"
+        },
+        {
+            "phrase": "COVERED BRIDGE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "MOVIE TRAILER",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "SLOW COOKED BEEF STEW",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "BEYOND MY WILDEST EXPECTATIONS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE COLUMBIA RIVER",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "PLAYING POLO and FLYING SOLO",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "THEATER CRITIC",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "YOUNG HOBBIT",
+            "category": "Character"
+        },
+        {
+            "phrase": "APPLE ORCHARD",
+            "category": "Place"
+        },
+        {
+            "phrase": "RESTAURANT MANAGER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "REDS YELLOWS AND ORANGES",
+            "category": "Things"
+        },
+        {
+            "phrase": "RELAXING AND UNWINDING",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BLUEBERRY PRESERVES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "TIMING IS EVERYTHING",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PEDALING A UNICYCLE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "FRESH PAPAYA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "CHERRY PIE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "TREASURE HUNTERS",
+            "category": "People"
+        },
+        {
+            "phrase": "LISTENING TO MY BOOM BOX",
+            "category": "The 80's"
+        },
+        {
+            "phrase": "ENJOYING DINNER POOLSIDE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "STOP THE PRESSES",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CASHMERE TURTLENECK",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "HOMING PIGEONS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "PIZZA PARLOR",
+            "category": "Place"
+        },
+        {
+            "phrase": "MY COLLEGE SWEATSHIRT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MYSTERY NOVEL",
+            "category": "Thing"
+        },
+        {
+            "phrase": "POT ROAST WITH ROOT VEGETABLES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "CHUBBY CHEEKED CHIPMUNKS",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "AWESOME TOUR DIRECTOR",
+            "category": "Person"
+        },
+        {
+            "phrase": "PRETTY KITTY",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "SCORES and HIGHLIGHTS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "CITRUS JUICER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "I AM OUT OF HERE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PRESSURE COOKER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "PAST PRESENT AND FUTURE",
+            "category": "Things"
+        },
+        {
+            "phrase": "ZIP LINING ABOVE THE TREES",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "THE ROYAL PALACE",
+            "category": "Place"
+        },
+        {
+            "phrase": "DANCE INSTRUCTOR",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "BAKED YAMS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "TRAVEL PARTNER",
+            "category": "Person"
+        },
+        {
+            "phrase": "SKINNY JEANS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "SPECTACULAR STAGE SHOW",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "AND THE DISH RAN AWAY THE SPOON",
+            "category": "Quotation"
+        },
+        {
+            "phrase": "THE BEST SURFING EVER",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "HORSE DRAWN CARRIAGE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "SUPERMARKET SHOPPING",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "KANSAS CITY",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "MONKEY WRENCH",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "BOLD CONCEPT",
+            "category": "Thing"
+        },
+        {
+            "phrase": "A LITTLE ADVENTURE",
+            "category": "Event"
+        },
+        {
+            "phrase": "SPUR OF THE MOMENT",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "EVERY BREATH YOU TAKE BY THE POLICE",
+            "category": "The 80's"
+        },
+        {
+            "phrase": "PUMP",
+            "category": "Fall Fun!"
+        },
+        {
+            "phrase": "HUNDREDS OF MILES OF COASTLINE",
+            "category": "Places"
+        },
+        {
+            "phrase": "A SCARF AND SWEATER",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MIND BLOWING TECHNOLOGY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "ORGANIC YOGURT",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "TAKING IT ALL IN",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "COMMERCIAL PILOT",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "COME OUT COME OUT WHEREVER YOU ARE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "AUTHENTIC JAMAICAN CUISINE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE WINNING TICKET",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PORK ON MY FORK",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "BORDER COLLIE",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "VAMPIRE MOVIE",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "WITH OR WITHOUT YOU",
+            "category": "Song Title"
+        },
+        {
+            "phrase": "GRACIOUS HOST",
+            "category": "Person"
+        },
+        {
+            "phrase": "MOVING ON TO BIGGER AND BETTER THINGS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CARBONATED WATER BUFFALO",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "THERE IS SO MUCH TO DO HERE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "FOOD FESTIVAL",
+            "category": "Event"
+        },
+        {
+            "phrase": "BALLOONS AND CONFETTI",
+            "category": "Things"
+        },
+        {
+            "phrase": "GLACIER BAY",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "THE LONE STAR STATE",
+            "category": "Place"
+        },
+        {
+            "phrase": "PLAYING PHONE TAG",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PITCHER OF CHILLED SWEET TEA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "A WONDERFUL PLACE TO STAY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "SAM HOUSTON",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "A MOMENT LIKE THIS",
+            "category": "Song Title"
+        },
+        {
+            "phrase": "WILD BRONCO",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "TOMMY LEE JONES",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "BIG BELT BUCKLE",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "ANNUAL CHILI COOK OFF",
+            "category": "Event"
+        },
+        {
+            "phrase": "EMBRACING AN OPPORTUNITY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BOMBER JACKET",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "LONESOME DOVE",
+            "category": "The 80's"
+        },
+        {
+            "phrase": "SOFT SERVE ICE CREAM",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "HIKING TO A WATERFALL",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MATTHEW MCCONAUGHEY",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "QUARTERBACK SNEAK",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "A HOUSEHOLD WORD",
+            "category": "Thing"
+        },
+        {
+            "phrase": "DAVY CROCKETT",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "A REAL CROWD PLEASER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "FRIDAY NIGHT LIGHTS",
+            "category": "Title"
+        },
+        {
+            "phrase": "DRILLING FOR OIL AND VINEGAR",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "INCREDIBLE ISLAND RESORT",
+            "category": "Place"
+        },
+        {
+            "phrase": "RODEO ANNOUNCER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "PAYING A COURTESY CALL",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE ANIMAL KINGDOM",
+            "category": "Thing"
+        },
+        {
+            "phrase": "YEARLY BASH",
+            "category": "Event"
+        },
+        {
+            "phrase": "LONGHORN CATTLE",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "WOODY HARRELSON",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "ALWAYS ON MY MIND BY WILLIE NELSON",
+            "category": "Song/Artist"
+        },
+        {
+            "phrase": "WHAT MORE COULD YOU ASK FOR",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BREAKFAST TACOS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE SPACE STATION",
+            "category": "Place"
+        },
+        {
+            "phrase": "RESEARCH REPORT",
+            "category": "Thing"
+        },
+        {
+            "phrase": "HUDDLE UP",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LONDON and PARIS",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "THE STRONG SILENT TYPE",
+            "category": "Person"
+        },
+        {
+            "phrase": "I WANT TO SAIL AWAY TO A DISTANT SHORE",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "HELLO KITTY LITTER",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "ARCHAEOLOGICAL SITES",
+            "category": "Places"
+        },
+        {
+            "phrase": "MOTIVATIONAL SPEAKER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "STEPPING INTO THE SPOTLIGHT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BORN FOR THE ROLE",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "YOGA APPAREL",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "SYDNEY OPERA HOUSE",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "BASEBALL COACH",
+            "category": "Person"
+        },
+        {
+            "phrase": "MAKING A GREAT FIRST IMPRESSION",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MEDITERRANEAN COASTLINE",
+            "category": "Place"
+        },
+        {
+            "phrase": "A HEARTY APPETITE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "STICK THE LANDING",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "MANGO JUICE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MEDIEVAL CASTLE",
+            "category": "Place"
+        },
+        {
+            "phrase": "GARDENING GLOVES",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "GLUTEN FREE PARKING",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "MY HEART GOING BOOM BOOM BOOM",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "PLANNING OUR ITINERARY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "COSTA RICA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SHOOTS AND SCORES",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PHOTO BOX",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "FLORENCE ITALY",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "MOTHER GOOSE",
+            "category": "Character"
+        },
+        {
+            "phrase": "SPECTACULAR HONG KONG SKYLINE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CHARMING COBBLESTONE STREETS",
+            "category": "Places"
+        },
+        {
+            "phrase": "GOOD NIGHT SLEEP TIGHT",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "LOOK ON THE BRIGHT SIDE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "COWBOY OUTFIT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "NIAGARA FALLS",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "SANDWICH SPREAD",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "NORTH AMERICAN SOLAR ECLIPSE",
+            "category": "Headline"
+        },
+        {
+            "phrase": "THIS IS THE BEST DAY OF MY LIFE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TEXTBOOK EXAMPLE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BUILDING BRIDGES",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "COMPACT MICROWAVE",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "LADIES NIGHT",
+            "category": "Event"
+        },
+        {
+            "phrase": "THEATER PROGRAM",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "SCRUNCHIES and LEG WARMERS",
+            "category": "80's What Are You Wearing?"
+        },
+        {
+            "phrase": "DIRECT FLIGHT TO HONOLULU",
+            "category": "Thing"
+        },
+        {
+            "phrase": "WEDDING CRASHERS",
+            "category": "Movie Title"
+        },
+        {
+            "phrase": "I LOVE YOU LIKE A SISTER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PAIR OF HEADPHONES",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "CAN I BORROW THIS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "INSIDE JOKE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BEST FRIENDS FOREVER",
+            "category": "People"
+        },
+        {
+            "phrase": "QUOTATION MARK WAHLBERG",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "THE BLUE MOUNTAINS",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "LEGALLY BLONDE",
+            "category": "Movie Title"
+        },
+        {
+            "phrase": "LACE TRIMMED SKIRT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "BEIJING AND SHANGHAI",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "CHATTING ONLINE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THELMA and LOUISE",
+            "category": "Movie Title"
+        },
+        {
+            "phrase": "CYNDI LAUPER WINS GRAMMY AWARD",
+            "category": "80's Show Biz"
+        },
+        {
+            "phrase": "BEACH AFTER BEACH AFTER BEACH",
+            "category": "Places"
+        },
+        {
+            "phrase": "BELTED TRENCH COAT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "YOUR BIGGEST FAN",
+            "category": "Person"
+        },
+        {
+            "phrase": "GOOEY FUDGE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PLATFORM WEDGES",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "WARMING UP BEFORE WORKING OUT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "GREAT ART GREAT FOOD GREAT WINE",
+            "category": "Things"
+        },
+        {
+            "phrase": "WINONA RYDER",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "CHIPS and CHEESE DIP",
+            "category": "Food and Drink"
+        },
+          {
+            "phrase": "OFFICIAL BIOGRAPHER",
+            "category": "Person"
+        },
+        {
+            "phrase": "SUPERGIRL",
+            "category": "Character"
+        },
+        {
+            "phrase": "EYE SHADOW",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MAKING UP NICKNAMES FOR PEOPLE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "CURIOUS GEORGE CLOONEY",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "DRAMATIC CLIFFS AND ARCHES",
+            "category": "Things"
+        },
+        {
+            "phrase": "ON WEDNESDAYS WE WEAR PINK",
+            "category": "Movie Quote"
+        },
+        {
+            "phrase": "JUICY ROAST and AVOCADO TOAST",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "GULPING DOWN COFFEE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "LITTLE SHOP OF HORRORS",
+            "category": "Title"
+        },
+        {
+            "phrase": "SPIDERS and SNAKES",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "PICK UP THE PHONE AND CALL GHOSTBUSTERS",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "VISITING THE BOB MARLEY MUSEUM",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "FREIGHT ELEVATOR",
+            "category": "Place"
+        },
+        {
+            "phrase": "FANGS AND A BLACK CAPE",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "GIANT CYCLOPS",
+            "category": "Character"
+        },
+        {
+            "phrase": "A CABIN IN THE WOODS",
+            "category": "Place"
+        },
+        {
+            "phrase": "TALENT AGENT",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "A PECULIAR CAST OF CHARACTERS",
+            "category": "People"
+        },
+        {
+            "phrase": "THE ZOMBIE SURVIVAL GUIDE",
+            "category": "Best Seller"
+        },
+        {
+            "phrase": "A SEASHELL NECKLACE",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "THE MYSTERY MACHINE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "I LIKE MY CHANCES",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BATTING A THOUSAND",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "FARGO AND BISMARCK",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "TALES OF TERROR",
+            "category": "Things"
+        },
+        {
+            "phrase": "JACK NICHOLSON",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "DARKNESS FALLS ACROSS THE LAND",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "TAKE ME WITH YOU PLEASE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "STRANGER THINGS",
+            "category": "Title"
+        },
+        {
+            "phrase": "CARTWHEELS and SOMERSAULTS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "OFFICE BUILDING",
+            "category": "Place"
+        },
+        {
+            "phrase": "SCARY CLOWN",
+            "category": "Character"
+        },
+        {
+            "phrase": "SHOCK THE MONKEY",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "PILLOWCASE FULL OF TREATS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "RESTAURANTS AND NIGHTCLUBS",
+            "category": "Places"
+        },
+        {
+            "phrase": "ANTHONY HOPKINS",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "STRIKING GOLD",
+            "category": "Event"
+        },
+        {
+            "phrase": "ROOKS AND PAWNS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "CRUNCHY PEANUT BRITTLE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PLAYING THE FIDDLE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ATTACK OF THE KILLER TOMATOES",
+            "category": "Title"
+        },
+        {
+            "phrase": "HAUNTED and WAFFLE HOUSE",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "BEAUTIFUL CALM FORESTS",
+            "category": "Places"
+        },
+        {
+            "phrase": "PEEKABOO I SEE YOU",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "HEARTBURN AND BRAIN FREEZE",
+            "category": "Things"
+        },
+        {
+            "phrase": "JAMES BOND VILLAINS",
+            "category": "Characters"
+        },
+        {
+            "phrase": "MERRY GO ROUND",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "AN AFTERNOON AT SEA",
+            "category": "Event"
+        },
+        {
+            "phrase": "SQUAD LEADER",
+            "category": "Person"
+        },
+        {
+            "phrase": "THE WESTERN HEMISPHERE",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SPOTTED LEOPARD",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "SPLIT PEA SOUP",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "BABY QUILT",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "CAMP PENDLETON",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "NEW CADETS",
+            "category": "People"
+        },
+        {
+            "phrase": "POWER DRILL SERGEANT",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "IMPRESSIVE VOLCANOES",
+            "category": "Things"
+        },
+        {
+            "phrase": "COMIC BOOK ARTIST",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "A SNAIL AND A WHALE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "THE GRAND TOUR",
+            "category": "Event"
+        },
+        {
+            "phrase": "HEAVY PARKA",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "FRESH FACED RECRUITS",
+            "category": "People"
+        },
+        {
+            "phrase": "BACK TO THE FUTURE",
+            "category": "80's Movie Title"
+        },
+        {
+            "phrase": "THIS LAND WAS MADE FOR YOU AND ME",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "ENJOYING SOME QUIET TIME",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "DRESS BLUES",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MAGICAL VOYAGE",
+            "category": "Event"
+        },
+        {
+            "phrase": "LIEUTENANT COLONEL",
+            "category": "Person"
+        },
+        {
+            "phrase": "SETTING AN EXAMPLE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BOOT AND SUMMER CAMP",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "WE TAKE CARE OF OUR OWN BY BRUCE SPRINGSTEEN",
+            "category": "Song/Artist"
+        },
+        {
+            "phrase": "YOU HAD ME AT ALOHA",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "WEST POINT",
+            "category": "Place"
+        },
+        {
+            "phrase": "OUTSTANDING SERVICE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BUTCHER PAPER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "MAXIMUM STRENGTH",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CHARCOAL GRILL",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "SUN SOAKED BEACHES",
+            "category": "Places"
+        },
+        {
+            "phrase": "LOUDSPEAKER",
+            "category": "Thing"
+        },
+        {
+            "phrase": "GUSHING WITH GRATITUDE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WILDLIFE BIOLOGIST",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "TWICE AS NICE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "A HEALTHY GLOW",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CHRISTMAS IS JUST AROUND THE CORNER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CELEBRATING MY GOOD FORTUNE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ELECTRIC TOOTHBRUSH",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "COLD CUTS AND HOT MUSTARD",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PATIO CUSHIONS",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "MY DARLING CHILDREN",
+            "category": "People"
+        },
+        {
+            "phrase": "WELCOME MAT",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "EARLY HOLIDAY SHOPPING",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CRAFTY CROSSWORD CLUES",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "DESIGNER WATCH",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "BIRTHDAY BALLOONS",
+            "category": "Things"
+        },
+        {
+            "phrase": "A MINOR QUIBBLE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "STAYING IN TOUCH",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE WHITE RABBIT",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "YOU ARE MY GUARDIAN ANGEL FOOD CAKE",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "SO MANY CHERISHED MEMORIES",
+            "category": "Things"
+        },
+        {
+            "phrase": "SUNSCREEN AND A HAT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "WRAPPING PAPER",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "TAKE IT UP A NOTCH",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BAKED ZUCCHINI",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "FELLOW TEAMMATE",
+            "category": "Person"
+        },
+        {
+            "phrase": "STOCKING STUFFERS",
+            "category": "Things"
+        },
+        {
+            "phrase": "DECORATING THE HOUSE",
+            "category": "Event"
+        },
+        {
+            "phrase": "SINGING AT THE TOP OF MY LUNGS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SUNFLOWER SEEDS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "WE ARE IN THIS TOGETHER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "WIDE BOULEVARD",
+            "category": "Place"
+        },
+        {
+            "phrase": "BIRDS OF A FEATHER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "SNOW SHOVEL",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "MY FAVORITE SEASON OF THE YEAR",
+            "category": "Thing"
+        },
+        {
+            "phrase": "COOLING OFF IN THE POOL",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "LIFELONG LEARNER",
+            "category": "Person"
+        },
+        {
+            "phrase": "CHAMPIONSHIP GAME",
+            "category": "Event"
+        },
+        {
+            "phrase": "PROVIDING USEFUL ADVICE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "COLORADO SPRINGS",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "BRAND NEW SNEAKERS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "THE BIOGRAPHY OF BENJAMIN FRANKLIN",
+            "category": "Title"
+        },
+        {
+            "phrase": "THANKSGIVING RECIPES",
+            "category": "Things"
+        },
+        {
+            "phrase": "SETTING THE STAGE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "DOCTOR WATSON",
+            "category": "Character"
+        },
+        {
+            "phrase": "BEAUTY PAGEANT",
+            "category": "Event"
+        },
+        {
+            "phrase": "WAVING THE FLAG",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "HARD AND FAST RULE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CRANBERRY CORN BREAD STUFFING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "A DAZZLING STRETCH OF BEACH",
+            "category": "Place"
+        },
+        {
+            "phrase": "SOLD OUT CONCERT",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "A TRUE GENTLEMAN",
+            "category": "Person"
+        },
+        {
+            "phrase": "BOYHOOD PALS",
+            "category": "People"
+        },
+        {
+            "phrase": "STRONG LEADERSHIP",
+            "category": "Thing"
+        },
+        {
+            "phrase": "THE LONE RANGER",
+            "category": "Character"
+        },
+        {
+            "phrase": "ROSEMARY ROASTED POTATOES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "SUNNY SIDE UP UP AND AWAY",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "A NATURAL PARADISE",
+            "category": "Place"
+        },
+        {
+            "phrase": "MAYBE BABY",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "THE TIME HAS COME",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "STAND UP COMEDY",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "WIRE WHISK",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "FAMILY TRADITIONS",
+            "category": "Things"
+        },
+        {
+            "phrase": "GRAZING SHEEP",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "HELP ME HELP YOU HELP ME HELP YOU",
+            "category": "Movie Quote"
+        },
+        {
+            "phrase": "LEARNING LIFE LESSONS",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "CAREFREE SUNBATHERS",
+            "category": "People"
+        },
+        {
+            "phrase": "RUNNING THE TURKEY TROT",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "HILARIOUS COMEDIAN",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "LOGIC PUZZLE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "WORKING TOGETHER",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "HOT OFF THE GRILL",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE PIERS OF SAN FRANCISCO",
+            "category": "Places"
+        },
+        {
+            "phrase": "COLORFUL COLONIAL ARCHITECTURE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PATRICK HENRY",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "INGENIOUS INVENTION",
+            "category": "Thing"
+        },
+        {
+            "phrase": "MOTHER NATURE",
+            "category": "Character"
+        },
+        {
+            "phrase": "LATEST DEVELOPMENTS",
+            "category": "Things"
+        },
+        {
+            "phrase": "WHEN WE WALKED IN FIELDS OF GOLD",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "CHARTERING A POWERBOAT",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "LOBSTER POT",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "IN MY HUMBLE OPINION",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "KYOTO JAPAN",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "CONNECTING THE DOTS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ALL THE COLORS OF THE RAINBOW",
+            "category": "Things"
+        },
+        {
+            "phrase": "AN ECOLOGICAL WONDERLAND",
+            "category": "Place"
+        },
+        {
+            "phrase": "FERRY CAPTAIN",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "DESERT WILDFLOWERS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "LASAGNA PAN",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "WARMING UP MY VOICE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MOUNTAIN STREAM",
+            "category": "Thing"
+        },
+        {
+            "phrase": "KERMIT THE FROG",
+            "category": "Character"
+        },
+        {
+            "phrase": "SLEEPING and GRAB BAG",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "HONESTY IS THE BEST POLICY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "DELIGHTFUL RUM PUNCH",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "YELLOW JACKETS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "MAKING THE MOST OF IT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE COAST IS CLEAR",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "GYPSY MOTH",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "BUILDING A CAMPFIRE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ALMOND MILK",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "SUNSHINE ON MY SHOULDERS",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "THE SHADE OF A MANGO TREE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PARACHUTE PANTS",
+            "category": "80's What Are You Wearing?"
+        },
+        {
+            "phrase": "CANOES AND SNOWSHOES",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "KARAOKE PARTY",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "HIKING BOOTS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MARCH OF THE PENGUINS",
+            "category": "Movie Title"
+        },
+        {
+            "phrase": "GLACIER NATIONAL PARK",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "THRILLING HELICOPTER TOUR",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "NATURAL WONDERS",
+            "category": "Things"
+        },
+        {
+            "phrase": "DID I SAY THAT OUT LOUD",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "GIVING HELPFUL ADVICE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ON THE HIGHWAY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "GOOD TIDINGS",
+            "category": "Things"
+        },
+        {
+            "phrase": "THE APPLE OF MY EYE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "COMING UP WITH A GREAT GAME PLAN",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SEA URCHINS and TROPICAL FISH",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "FAMILY GET TOGETHER",
+            "category": "Event"
+        },
+        {
+            "phrase": "JOURNEY BY BOAT",
+            "category": "Event"
+        },
+        {
+            "phrase": "TRIMMING THE TREE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE TIME IS NOW",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CHOCOLATE CHIP CHRISTMAS COOKIES",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "SCHOOL FOR THE PERFORMING ARTS",
+            "category": "Place"
+        },
+        {
+            "phrase": "ADDRESS BOOK",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "HORSE DRAWN SLEIGH",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BASKETS AND HAMPERS",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "SILVER BELLS SILVER BELLS",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "AWARDS AND CERTIFICATES",
+            "category": "Things"
+        },
+        {
+            "phrase": "READING THE LOCAL NEWSPAPER",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PICTURE PERFECT HIKING TRAILS",
+            "category": "Places"
+        },
+        {
+            "phrase": "SINGER JOSH GROBAN",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "FIRST AND FOREMOST",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "YOUNGSTOWN OHIO",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "LAUGHING CHILDREN",
+            "category": "People"
+        },
+        {
+            "phrase": "WHITE DAFFODILS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "THE LION THE WITCH AND THE WARDROBE",
+            "category": "Title"
+        },
+        {
+            "phrase": "STUNNING AERIAL PHOTOS",
+            "category": "Things"
+        },
+        {
+            "phrase": "FOOD PROCESSOR",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "COFFEE TOFFEE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "HUGS ALL AROUND",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "RED BRICK CHIMNEY",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "WEATHER FORECAST",
+            "category": "Thing"
+        },
+        {
+            "phrase": "SINGING NIGHTINGALES",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "SURFERS AND SNORKELERS",
+            "category": "People"
+        },
+        {
+            "phrase": "A NICE CHUNK OF CHANGE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TYING A BEAUTIFUL BOW",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "GOURMET CUPCAKES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "EGYPTIAN PHARAOHS",
+            "category": "People"
+        },
+        {
+            "phrase": "HUMMINGBIRDS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "HOSTING A POTLUCK DINNER",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE GHOST OF CHRISTMAS PAST",
+            "category": "Character"
+        },
+        {
+            "phrase": "GLORIOUS WHITE SAND BEACHES",
+            "category": "Places"
+        },
+        {
+            "phrase": "PEPPERMINT CRUNCH",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "FUN FACTS AND TRIVIA",
+            "category": "Things"
+        },
+        {
+            "phrase": "PULSE POUNDING DRAMA",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "QUICK JOG IN THE PARK",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "STRINGING POPCORN",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PASTRY CHEF",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "CABBAGE PATCH KIDS",
+            "category": "80's Fun and Games"
+        },
+        {
+            "phrase": "TINSEL TRADITIONS and TOGETHERNESS",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "BUSY SIDEWALKS",
+            "category": "Places"
+        },
+        {
+            "phrase": "FIRST PLACE TROPHY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "JUBILANT GALA",
+            "category": "Event"
+        },
+        {
+            "phrase": "ROASTING CHESTNUTS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CLEARANCE SALE",
+            "category": "Event"
+        },
+        {
+            "phrase": "HEROES and VILLAINS",
+            "category": "Characters"
+        },
+        {
+            "phrase": "AMUSEMENT PARK GUIDEBOOK",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CRAB APPLE TREE",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "MODEL TRAIN SET",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "CAPE OF GOOD HOPE",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "MAKE MY WISH COME TRUE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "ASHTON KUTCHER",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "POSTING PICTURES OF THE FAMILY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "COOL ISLAND VIBES",
+            "category": "Things"
+        },
+        {
+            "phrase": "HEART TO HEART TALK",
+            "category": "Event"
+        },
+        {
+            "phrase": "STRAWBERRY FROSTING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MIXING BOWLS WITH LIDS",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "COMET AND CUPID",
+            "category": "Characters"
+        },
+        {
+            "phrase": "CONFERENCE CHAMPIONS",
+            "category": "People"
+        },
+        {
+            "phrase": "ACTING IN THE SCHOOL PLAY",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "COLORFUL BOTANICAL GARDEN",
+            "category": "Place"
+        },
+        {
+            "phrase": "MEAT THERMOMETER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "A MUST WIN SITUATION",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "POWER FAILURE",
+            "category": "Event"
+        },
+        {
+            "phrase": "THE LITTLE DRUMMER BOY",
+            "category": "Title"
+        },
+        {
+            "phrase": "OSCAR NOMINATION",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "JUMPING ON A TRAMPOLINE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "DOWNTOWN KINGSTON",
+            "category": "Place"
+        },
+        {
+            "phrase": "PLUM PUDDING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "WAITING UNDER THE MISTLETOE",
+                "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "OFFICE PARTY",
+            "category": "Event"
+        },
+        {
+            "phrase": "BILOXI AND JACKSON",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "FALLING SNOWFLAKES",
+            "category": "Things"
+        },
+        {
+            "phrase": "DID I MAKE THE LIST",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TINY TOTS WITH THEIR EYES ALL AGLOW",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "REFRESHING PINEAPPLES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MELISSA MCCARTHY",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "WARM WOOL MITTENS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "BASHFUL AND GRUMPY",
+            "category": "Characters"
+        },
+        {
+            "phrase": "HAPPINESS AND CHEER",
+            "category": "Things"
+        },
+        {
+            "phrase": "MASTER OF CEREMONIES",
+            "category": "Person"
+        },
+        {
+            "phrase": "COBBLERS CRUMBLES and CRISPS",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "LUSH GREEN RAIN FOREST",
+            "category": "Place"
+        },
+        {
+            "phrase": "BETTER LATE THAN NEVER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CLOSING THE DEAL",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WHITE BLAZER",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MAPLE GLAZED CHRISTMAS HAM",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "COMPUTER LAB",
+            "category": "Place"
+        },
+        {
+            "phrase": "SINGING OUR FAVORITE CAROLS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "KITESURFING LESSONS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "THE BREAKFAST CLUB",
+            "category": "80's Movie Title"
+        },
+        {
+            "phrase": "JOYFUL MEMORIES",
+            "category": "Things"
+        },
+        {
+            "phrase": "OCEAN KAYAKING",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "SHINING STARS",
+            "category": "Things"
+        },
+        {
+            "phrase": "FAITHFUL FRIENDS",
+            "category": "People"
+        },
+        {
+            "phrase": "I LAUGHED SO HARD I CRIED",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "A BUNDLE OF TOYS HE HAD FLUNG ON HIS BACK",
+            "category": "Quotation"
+        },
+        {
+            "phrase": "MAKING TRAVEL PREPARATIONS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PORCH LIGHT",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "UGLY SWEATER CONTEST",
+            "category": "Event"
+        },
+        {
+            "phrase": "GENEVA SWITZERLAND",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SHOCK WAVE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "FA LA LA LA LA LA LA LA LA",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "STRIKING A POSE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WHO ATE ALL THE MILK AND COOKIES",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE PERFECT SPOT FOR A PICNIC",
+            "category": "Place"
+        },
+        {
+            "phrase": "BRIDE TO BE",
+            "category": "Person"
+        },
+        {
+            "phrase": "MIGRATING WHALES",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "GREAT MASTERPIECE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PLAYING IN THE BACKYARD",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "UKULELE LESSONS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "DIRTY DANCING",
+            "category": "80's Movie Title"
+        },
+        {
+            "phrase": "WINNING A PLAYOFF GAME",
+            "category": "Event"
+        },
+        {
+            "phrase": "UNSPOILED NATURAL BEAUTY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CABINET MAKER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "STRANGER THAN FICTION",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BAG OF CHIPS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PROFESSIONAL SURFER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "REMARKABLE RESEMBLANCE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "TAME AND PREDICTABLE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "PEPPERONI PINEAPPLE PIZZA",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "LISTENING TO A STEEL DRUM BAND",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "LEGAL EAGLE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "LIVELY CELEBRATION",
+            "category": "Event"
+        },
+        {
+            "phrase": "BRIEF CAMEO",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "WEDDING ON THE BEACH",
+            "category": "Event"
+        },
+        {
+            "phrase": "TWISTS AND TURNS",
+            "category": "Things"
+        },
+        {
+            "phrase": "JURASSIC PARK BENCH",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "TAKING A COMMANDING LEAD",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SOMETHING FOR EVERYONE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "NICOLE KIDMAN",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "ICE CREAM IN A WAFFLE CONE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "CAREER COUNSELOR",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "WOOD VANITY",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "THE NORTH SHORE",
+            "category": "Place"
+        },
+        {
+            "phrase": "FOLK FESTIVAL",
+            "category": "Event"
+        },
+        {
+            "phrase": "GRAMMY WINNER BRUNO MARS",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "ASPIRING ATHLETE",
+            "category": "Person"
+        },
+        {
+            "phrase": "GOING BANANAS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MEAT TENDERIZER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "FAMILY PHYSICIAN",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "NEW HAVEN CONNECTICUT",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "ENCORE PERFORMANCE",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "MAJOR METROPOLITAN AREA",
+            "category": "Place"
+        },
+        {
+            "phrase": "UNDEFEATED BOXER SHORTS",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "BREAKFAST ON A CATAMARAN",
+            "category": "Event"
+        },
+        {
+            "phrase": "LAWN SPRINKLERS",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "GIANT IGUANA",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "THE GARDEN STATE",
+            "category": "Place"
+        },
+        {
+            "phrase": "JUSTICE LEAGUE",
+            "category": "Title"
+        },
+        {
+            "phrase": "WRITING A LETTER TO THE EDITOR",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CRYSTAL CLEAR WATER",
+            "category": "Thing"
+        },
+        {
+            "phrase": "SLICED HONEYDEW",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "OUT OF SIGHT",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THROWING A BOOMERANG",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "WICKED QUEEN",
+            "category": "Character"
+        },
+        {
+            "phrase": "SCOTTSDALE ARIZONA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "BLAKE SHELTON",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "I NEED A RIDE TO THE AIRPORT",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "DESK ORGANIZER",
+            "category": "Thing"
+        },
+        {
+            "phrase": "DOWNTOWN DINER",
+            "category": "Place"
+        },
+        {
+            "phrase": "CHECKING MY CALENDAR",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ITALIAN BAKERY",
+            "category": "Place"
+        },
+        {
+            "phrase": "NATIVE NEW YORKER",
+            "category": "Person"
+        },
+        {
+            "phrase": "YOU SNOOZE YOU LOSE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "SAVING PRIVATE RYAN GOSLING",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "SALES CONSULTANT",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "BREAKING THE MOLD",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "GOING WAY OVERBOARD",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ATLANTIC CITY BOARDWALK",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "SHOPPING SPREE",
+            "category": "Event"
+        },
+        {
+            "phrase": "EMMY WINNING ACTORS AND ACTRESSES",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "MONKEYS SLOTHS and TOUCANS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "RUNNING ON EMPTY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SPINACH ARTICHOKE DIP",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE USUAL HANGOUT",
+            "category": "Place"
+        },
+        {
+            "phrase": "NAVIGATION SYSTEM",
+            "category": "Thing"
+        },
+        {
+            "phrase": "ORIGINAL MUSICAL",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "ONBOARD SALONS and SPAS",
+            "category": "Places"
+        },
+        {
+            "phrase": "RIGHT ON THE TIP OF MY TONGUE TWISTER",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "WHALE WATCHING CRUISE",
+            "category": "Event"
+        },
+        {
+            "phrase": "KICK UP YOUR HEELS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "GRACEFUL SWANS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "MATH WORKBOOK",
+            "category": "Thing"
+        },
+        {
+            "phrase": "STATE OF THE ART COMFORTS",
+            "category": "Things"
+        },
+        {
+            "phrase": "CAPTAIN HOOK",
+            "category": "Character"
+        },
+        {
+            "phrase": "BAKED APPLES WITH BROWN SUGAR",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "SATELLITE and SERVING DISH",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "THRILLING ADVENTURE",
+            "category": "Event"
+        },
+        {
+            "phrase": "SPACIOUS SUITES",
+            "category": "Places"
+        },
+        {
+            "phrase": "TOO CUTE FOR WORDS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "HANDPICKED AVOCADO",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MAKING WAVES",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "DINNER PLATES",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "RECEIVING FLOWERS AT THE OFFICE",
+            "category": "Event"
+        },
+        {
+            "phrase": "THERE ARE SO MANY THINGS TO DO",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "A BUCKET OF ICE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "THE LATEST AND GREATEST",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "JOIN OUR GROUP",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LEGENDARY SERVICE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PLAYING TETHERBALL",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "CREATE YOUR OWN OMELET",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "TAKING MORE THAN A FEW SNAPSHOTS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE PLANET EARTH",
+            "category": "Place"
+        },
+        {
+            "phrase": "DIFFICULT TO KNOW",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "UPSCALE BOUTIQUE",
+            "category": "Place"
+        },
+        {
+            "phrase": "A POD OF DOLPHINS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "SPICY CRAB CAKES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MEETING OUR FAVORITE CHARACTERS",
+            "category": "Event"
+        },
+        {
+            "phrase": "SUNNY DAY AFTER SUNNY DAY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "SHOULDER PADS",
+            "category": "80's What Are You Wearing?"
+        },
+        {
+            "phrase": "CHANGING COURSE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "FILM CLIP",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "TOPIC OF CONVERSATION",
+            "category": "Thing"
+        },
+        {
+            "phrase": "BELGIAN WAFFLES WITH STRAWBERRIES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "EXHILARATING SPEEDBOAT RIDE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "ACTRESS AMY ADAMS",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "KNICKKNACK SHELF",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "TAKING A POP QUIZ",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CANCUN MEXICO",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "BATTLE OF THE BANDS",
+            "category": "Event"
+        },
+        {
+            "phrase": "IF THESE WALLS COULD TALK",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE ROYAL OPERA HOUSE",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "TURKISH DELIGHT",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "RUGGED OUTDOORSMAN",
+            "category": "Person"
+        },
+        {
+            "phrase": "BLACK PUMPS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "YORKSHIRE PUDDING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE EYE OF THE TIGER",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "GLITTERING BLUE LAKES",
+            "category": "Places"
+        },
+        {
+            "phrase": "NO RIGHT TURN ON RED PEPPERS",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "SIMPLY BREATHTAKING",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "AMSTERDAM",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "A STEEPLECHASE IS A RACE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "GIANT TORTOISE",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "AMBITIOUS PROJECT",
+            "category": "Thing"
+        },
+        {
+            "phrase": "DOMINICAN REPUBLIC",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "DOWN COMFORTER",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "MAMMA MIA HERE I GO AGAIN",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "FRENCH PASTRIES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "WESTMINSTER ABBEY",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "WIGGLE OUT OF IT",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TORONTO CANADA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SUMMER OLYMPICS",
+            "category": "Event"
+        },
+        {
+            "phrase": "BLARNEY and EMMA STONE",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "CRUNCHY SHRIMP ROLL WITH GINGER SAUCE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "DISCOVERING HIDDEN TREASURES",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "DOLLHOUSE FURNITURE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "LANDMARK LOCATIONS",
+            "category": "Places"
+        },
+        {
+            "phrase": "A JAR OF COINS",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "PUBLIC APPEARANCE",
+            "category": "Event"
+        },
+        {
+            "phrase": "MAGNIFICENT GLACIERS",
+            "category": "Things"
+        },
+        {
+            "phrase": "EATING MY WAY THROUGH ITALY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "ELECTRICAL ENGINEER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "DESSERT TRAY",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "FUZZY WARM GLOVES",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "WINTER WONDERLAND",
+            "category": "Place"
+        },
+        {
+            "phrase": "FAIRY TALE BEAUTY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PAN FRIED POTATOES WITH BACON",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "WILLIAM TELL ME A BEDTIME STORY",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "EXCEEDING ALL EXPECTATIONS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "WATCHMAKER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "KNITTING A BLANKET",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THAT ABOUT WRAPS IT UP",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LAKE GENEVA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SOFTWARE DEVELOPER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "SLEDS and TOBOGGANS",
+            "category": "Things"
+        },
+        {
+            "phrase": "CASTLES AND COASTLINES",
+            "category": "Places"
+        },
+        {
+            "phrase": "LUCKY STREAK",
+            "category": "Event"
+        },
+        {
+            "phrase": "FIGURING IT ALL OUT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SWOOPING HAWKS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "THE MATTERHORN",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "WOODEN SPOON",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "GRINNING FROM EAR TO EAR",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "FABULOUS FONDUE FOUNTAIN",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "SCRATCH IT OFF MY BUCKET LIST",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TRADITIONAL APRON",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "EXPERT CRAFTSMAN",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CROWDED GYM",
+            "category": "Place"
+        },
+        {
+            "phrase": "YODELING COMPETITION",
+            "category": "Event"
+        },
+        {
+            "phrase": "PERFUME AND COLOGNE",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "SNOWCAPPED MOUNTAIN PEAKS",
+            "category": "Places"
+        },
+        {
+            "phrase": "HAPPY SURFBOARDERS",
+            "category": "People"
+        },
+        {
+            "phrase": "THE SPY WHO LOVED ME",
+            "category": "Title"
+        },
+        {
+            "phrase": "NEON SWEATBANDS",
+            "category": "80's What Are You Wearing?"
+        },
+        {
+            "phrase": "KINGS AND DUKES",
+            "category": "People"
+        },
+        {
+            "phrase": "WISH YOU WERE HERE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE STATEN ISLAND FERRY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "MY FAVORITE BATHING SUIT",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MONTGOMERY ALABAMA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SNICKERS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PERSONALIZED STATIONERY",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "BEIGE KHAKIS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "HERD OF BUFFALO",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "INTERESTING THEORY",
+            "category": "Thing"
+        },
+        {
+            "phrase": "SINGERS AND SONGWRITERS",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "LAS VEGAS and BACON STRIP",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "CULTURALLY DIVERSE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "ORCHESTRA CONDUCTOR",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "LONG BEACH CALIFORNIA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "I FOUND A WAY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LAND THAT I LOVE",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "EDUCATED GUESS",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PLAYING PAC MAN FOR HOURS",
+            "category": "80's Fun and Games"
+        },
+        {
+            "phrase": "FINANCIAL MANAGER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "CRATER LAKE IN OREGON",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "CLEVER RACCOON",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "CARGO SHORTS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "PINK BEGONIAS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "COWBOYS and COWGIRLS",
+            "category": "People"
+        },
+        {
+            "phrase": "COLESLAW WITH RAISINS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "RIP ROARING RIDE",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "STUNT COORDINATOR",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "HONOLULU HAWAII",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "WANDERING AROUND",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CERAMIC BAKEWARE",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "THE GRAND CANYON STATE",
+            "category": "Place"
+        },
+        {
+            "phrase": "ONE HUNDRED PERCENT",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CHATTANOOGA CHOO CHOO",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "SNORKELING WITH SEA TURTLES",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "DETROIT MICHIGAN",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "DRAGONS AND UNICORNS",
+            "category": "Characters"
+        },
+        {
+            "phrase": "BLACK OLIVES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "PAUL REVERE",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "SCHOOL PRINCIPAL",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "GOOD TIMES NEVER SEEMED SO GOOD",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "PLAYING IN THE WAVES",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "THE PRODUCE SECTION",
+            "category": "Place"
+        },
+        {
+            "phrase": "FANCY GOLD WATCH",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MILLENNIUM PARK",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "OPRAH WINFREY",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "DELICIOUS DEEP DISH PIZZA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "INCREDIBLE BEACHES AND BAYS",
+            "category": "Places"
+        },
+        {
+            "phrase": "TWO MINUTE DRILL",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "SHOVELING THE DRIVEWAY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "TAKING UP A HOBBY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "THE SPACE NEEDLE",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "VIDEO GAME DESIGNER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "WAKE UP AND SMELL THE COFFEE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "CARPOOL and LOIS LANE",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "JAMAICAN RUM PUNCH",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "Doctor FRASIER CRANE",
+            "category": "Character"
+        },
+        {
+            "phrase": "SPONTANEOUS TRIP",
+            "category": "Event"
+        },
+        {
+            "phrase": "HOLDING DOWN THE FORT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "GROUND PAPRIKA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE PACIFIC COAST",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "CREATIVE DIRECTOR",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "ROCK PAPER SCISSORS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "MAKING MAGICAL MEMORIES",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "MUD BATHS AND YOGA MATS",
+            "category": "Things"
+        },
+        {
+            "phrase": "WHITE TENNIS SHOES",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "GOING ON A SECOND DATE",
+            "category": "Event"
+        },
+        {
+            "phrase": "NEVER SAY NEVER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "JUNIOR PROM",
+            "category": "Event"
+        },
+        {
+            "phrase": "INDEPENDENCE HALL",
+            "category": "Landmark"
+        },
+        {
+            "phrase": "PROPERTY CARETAKER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "PHILADELPHIA FREEDOM SHINE ON ME",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "KEVIN BACON",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "MINTING MONEY",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "QUALIFIED BUYER",
+            "category": "Person"
+        },
+        {
+            "phrase": "HAPPY NEWLYWEDS",
+            "category": "People"
+        },
+        {
+            "phrase": "APPLE BLOSSOMS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "TOSSING THE BRIDAL BOUQUET",
+            "category": "Event"
+        },
+        {
+            "phrase": "SHAMPOO",
+            "category": "Rub-A-Dub-Dub"
+        },
+        {
+            "phrase": "NEW PAIR OF BERMUDA SHORTS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "DINING ROOM TABLE",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "FULL STEAM AHEAD",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "FORGING ONWARD",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MARRIAGE PROPOSAL",
+            "category": "Event"
+        },
+        {
+            "phrase": "WARM BANANA BREAD",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "LOOKING THROUGH BINOCULARS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "TEENY TINY TADPOLES",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "WE ARE THE LUCKIEST PEOPLE HERE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BRIGHT RED NAIL POLISH",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "MY PRINCE CHARMING",
+            "category": "Person"
+        },
+        {
+            "phrase": "CREATIVE VISIONARY",
+            "category": "Person"
+        },
+        {
+            "phrase": "THE OBJECT OF MY AFFECTION",
+            "category": "Person"
+        },
+        {
+            "phrase": "WORD TO THE WISE",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "FABULOUS FEBRUARY FOURTEENTH",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "DREAMING ABOUT VACATION",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BOW AND ARROW",
+            "category": "Things"
+        },
+        {
+            "phrase": "BERRIES AND CHERRIES",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "WITHDRAWING FUNDS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BRAINS AND BRAWN",
+            "category": "Things"
+        },
+        {
+            "phrase": "RED WHITE AND PINK CARNATIONS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "MY BIGGEST BRIGHTEST SMILE",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "TALENTED ARTIST",
+            "category": "Person"
+        },
+        {
+            "phrase": "TAKING THE PLUNGE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WHAT AN AMAZING DAY",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "OUR FIRST DANCE",
+            "category": "Event"
+        },
+        {
+            "phrase": "SCHOOL BUS DRIVER",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "MODERN ART INSTALLATION",
+            "category": "Thing"
+        },
+        {
+            "phrase": "HEART SHAPED BOX OF CHOCOLATES",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "REQUESTING TIME OFF FROM WORK",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "SHAVING CREAM",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "WILL YOU MARRY ME",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "KICKING AROUND IDEAS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "MY MOUTH IS WATERING",
+                "category": "Phrase"
+        },
+        {
+            "phrase": "TALENT SCOUT",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "UNEXPECTED GUEST BATHROOM",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "PLATEFUL OF PASTA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "CLEAR CARIBBEAN SKIES",
+            "category": "Things"
+        },
+        {
+            "phrase": "COOKBOOK STAND",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "MAKING HEADLINES",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WOOL PANTS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "EXECUTIVE CHEF",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "THE FRENCH QUARTER",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "ICE CREAM SUNDAE WITH A CHERRY ON TOP",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THE PERFECT WEATHER",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CAST IRON SKILLET",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "LEATHER JACKET",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "DOUBLE BOILER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "DINNER BY CANDLELIGHT",
+            "category": "Event"
+        },
+        {
+            "phrase": "JUSTIN TIMBERLAKE",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "BANANAS FOSTER BREAD PUDDING",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "HAWAIIAN MONK SEAL",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "MOVIE REVIEW",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "THE ENGLISH LANGUAGE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "SYDNEY AUSTRALIA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "BABY GROUNDHOGS",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "TABLE FOR TWO",
+            "category": "Thing"
+        },
+        {
+            "phrase": "GET IN THE GAME",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "HOMEMADE THREE CHEESE LASAGNA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "FRESH FISH FROM FLORIDA",
+            "category": "Same Letter"
+        },
+        {
+            "phrase": "A RELAXING WALK ALONG THE COAST",
+            "category": "Event"
+        },
+        {
+            "phrase": "COOKIE CUTTER",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "TOOT YOUR FLUTE",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "QUIET OFFICE",
+            "category": "Place"
+        },
+        {
+            "phrase": "WORKING UP AN APPETITE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "PACKED STADIUM",
+            "category": "Place"
+        },
+        {
+            "phrase": "GOLDEN GLOBE FOR BEST DIRECTOR",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "VOLCANIC ROCKS",
+            "category": "Things"
+        },
+        {
+            "phrase": "WINE CONNOISSEUR",
+            "category": "Person"
+        },
+        {
+            "phrase": "ONE IN A MILLION",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "ATLANTA GEORGIA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "HUNGRY JAGUAR",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "SNOWBOARDING",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "LAKE SUPERIOR",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "GATHERING AROUND THE FIREPLACE",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "WORK HARD PLAY HARDER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BIRTHDAY WISHES",
+            "category": "Things"
+        },
+        {
+            "phrase": "LAYERS OF CLOTHES",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "JUST MY IMAGINATION",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "GO WILD",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "A CUP OF HOT COCOA",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "THEATER BALCONY",
+            "category": "Place"
+        },
+        {
+            "phrase": "EXPLORING THE GARDEN ISLAND",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "CELEBRITY STYLIST",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "ALL SNUGGLED UP",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "SMOOTH TALKER",
+            "category": "Person"
+        },
+        {
+            "phrase": "HAPPY OCCASION",
+            "category": "Event"
+        },
+        {
+            "phrase": "CRISP CLEAN AIR",
+            "category": "Thing"
+        },
+        {
+            "phrase": "GOSSIP COLUMNIST",
+            "category": "Occupation"
+        },
+        {
+            "phrase": "ACTION FIGURE SKATING",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "FROZEN THE BROADWAY MUSICAL",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "SAILING ON BLUE WATERS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "LOTTERY WINNER",
+            "category": "Person"
+        },
+        {
+            "phrase": "ALPINE VILLAGES",
+            "category": "Places"
+        },
+        {
+            "phrase": "YUMMY POUND CAKE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "WARM APPLE CIDER",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "ANNE HATHAWAY",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "THE OLYMPIC SPORT OF CURLING",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "ICE FISHING FOR COMPLIMENTS",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "TURTLENECK SWEATER",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "CLAWS AND PAWS",
+            "category": "Rhyme Time"
+        },
+        {
+            "phrase": "SPACIOUS BACKYARD",
+            "category": "Place"
+        },
+        {
+            "phrase": "HAZY SHADE OF WINTER",
+            "category": "Song Lyrics"
+        },
+        {
+            "phrase": "THE COLD SHOULDER",
+            "category": "Thing"
+        },
+        {
+            "phrase": "PUTTING ON MY LONG JOHNS",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "EXCELLENT SCUBA DIVING",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "HOCKEY PLAYERS",
+            "category": "People"
+        },
+        {
+            "phrase": "ARCTIC FOXES",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "VIRAL VIDEO",
+            "category": "Thing"
+        },
+        {
+            "phrase": "FRESH BUDS BLOOMING",
+            "category": "Living Things"
+        },
+        {
+            "phrase": "SHOPPING DISTRICT",
+            "category": "Place"
+        },
+        {
+            "phrase": "PHILADELPHIA EAGLES ARE SUPER BOWL CHAMPIONS",
+            "category": "Headline"
+        },
+        {
+            "phrase": "WEDDING and RADIO RECEPTION",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "THE BEAUTY OF BELGIUM",
+            "category": "Thing"
+        },
+        {
+            "phrase": "COTTON SWEATPANTS",
+            "category": "What Are You Wearing?"
+        },
+        {
+            "phrase": "AVID BACKPACKER",
+            "category": "Person"
+        },
+        {
+            "phrase": "NEW BEGINNINGS",
+            "category": "Things"
+        },
+        {
+            "phrase": "MUSICAL CHAIRS",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "THE DAYS ARE GETTING LONGER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "AN EPIC RIVER CRUISE",
+            "category": "Event"
+        },
+        {
+            "phrase": "JENNIFER LOPEZ",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "TELEVISION THEME SONGS",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "KALAMAZOO AND SAGINAW",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "MONARCH BUTTERFLY",
+            "category": "Living Thing"
+        },
+        {
+            "phrase": "KNOXVILLE TENNESSEE",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SWIMMING AGAINST THE CURRENT",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "BASKETBALL PLAYER PIANO",
+            "category": "Before and After"
+        },
+        {
+            "phrase": "STUNNING ARCHITECTURE",
+            "category": "Thing"
+        },
+        {
+            "phrase": "CATERED LUNCH",
+            "category": "Event"
+        },
+        {
+            "phrase": "LIKE MONEY IN THE BANK",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "A SLICE OF CHEESECAKE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "MUGS AND CUPS",
+            "category": "In the Kitchen"
+        },
+        {
+            "phrase": "DOUBLE RAINBOW",
+            "category": "Thing"
+        },
+        {
+            "phrase": "DVD COLLECTION",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "INDIANA JONES AND THE TEMPLE OF DOOM",
+            "category": "80's Movie Title"
+        },
+        {
+            "phrase": "FINE FRENCH CHAMPAGNE",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "SOFTBALL LEAGUE",
+            "category": "Fun and Games"
+        },
+        {
+            "phrase": "VAST WAREHOUSE",
+            "category": "Place"
+        },
+        {
+            "phrase": "GENTLE AS A LAMB",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "TAYLOR SWIFT",
+            "category": "Proper Name"
+        },
+        {
+            "phrase": "I DO ALL MY OWN STUNTS",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "JOURNEY TO AMSTERDAM",
+            "category": "Event"
+        },
+        {
+            "phrase": "MAGAZINE SUBSCRIPTION",
+            "category": "Thing"
+        },
+        {
+            "phrase": "HANDCRAFTED FURNITURE",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "FACULTY and STAFF",
+            "category": "People"
+        },
+        {
+            "phrase": "IDAHO AND WYOMING",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "RAPID CITY SOUTH DAKOTA",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "FRIED OYSTERS",
+            "category": "Food and Drink"
+        },
+        {
+            "phrase": "EVERYBODY CUT FOOTLOOSE",
+            "category": "80's Song Lyrics"
+        },
+        {
+            "phrase": "NOT IN MY WILDEST DREAMS",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "BUSINESS AND INDUSTRY",
+            "category": "Things"
+        },
+        {
+            "phrase": "STYLISH THROW PILLOWS",
+            "category": "Around the House"
+        },
+        {
+            "phrase": "HIDDEN COVE",
+            "category": "Place"
+        },
+        {
+            "phrase": "VIRGINIA BEACH",
+            "category": "On the Map"
+        },
+        {
+            "phrase": "SPORTS BLOOPERS",
+            "category": "Show Biz"
+        },
+        {
+            "phrase": "TAKING THAT IMPORTANT FIRST STEP",
+            "category": "What Are You Doing?"
+        },
+        {
+            "phrase": "HAMMERHEAD and CARD SHARK",
+            "category": "Same Name"
+        },
+        {
+            "phrase": "THIS PLACE HAS IT ALL",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "LITTLE BO PEEP",
+            "category": "Character"
+        },
+        {
+            "phrase": "FRIENDS FOR LIFE",
+            "category": "People"
+        },
+        {
+            "phrase": "BUBBLE OVER",
+            "category": "Phrase"
+        },
+        {
+            "phrase": "THE SUNSHINE STATE",
+            "category": "Place"
+        },
+        {
+            "phrase": "AMATEUR ASTRONOMER",
+            "category": "Person"
+        },
+        {
+            "phrase": "I WAS BORN IN A SMALL TOWN",
+            "category": "80's Song Lyrics"
+        }
+]

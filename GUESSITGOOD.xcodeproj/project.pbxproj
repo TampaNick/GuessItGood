@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A81D72A22D2A390600C945ED /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D72A12D2A38F200C945ED /* GameBoard.swift */; };
+		A81D72A42D2A393600C945ED /* StartFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D72A32D2A392600C945ED /* StartFields.swift */; };
+		A83B1E0D2D321954008C9E26 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E0C2D32194C008C9E26 /* MenuView.swift */; };
+		A83B1E0F2D3219E8008C9E26 /* UserGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E0E2D3219D9008C9E26 /* UserGuideView.swift */; };
+		A83B1E112D322487008C9E26 /* HamburgerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E102D322470008C9E26 /* HamburgerMenu.swift */; };
+		A83B1E412D35ED95008C9E26 /* QuickStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E402D35ED85008C9E26 /* QuickStartView.swift */; };
+		A83B1E432D35F3B8008C9E26 /* GamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E422D35F3AD008C9E26 /* GamePlayView.swift */; };
+		A83B1E452D35F4E8008C9E26 /* SolvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B1E442D35F4DB008C9E26 /* SolvingView.swift */; };
+		A86C3C662D2E1A20003237CE /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = A86C3C652D2E1A20003237CE /* GoogleMobileAds */; };
+		A86C3C682D2E1A56003237CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C3C672D2E1A42003237CE /* AppDelegate.swift */; };
+		A86C3C6A2D2E1AB8003237CE /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C3C692D2E1AAF003237CE /* AdManager.swift */; };
+		A86CE4F12D48271300B81E9F /* ClueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CE4F02D48270800B81E9F /* ClueButtonView.swift */; };
+		A8796B1D2D26FEFD00C79DF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8796B142D26FEFD00C79DF2 /* ContentView.swift */; };
+		A8796B1E2D26FEFD00C79DF2 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */; };
+		A8796B1F2D26FEFD00C79DF2 /* GUESSITGOODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */; };
+		A8AF29F22D210EA000DE537F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF29F12D210E8C00DE537F /* SpeechManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A81D72A12D2A38F200C945ED /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		A81D72A32D2A392600C945ED /* StartFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFields.swift; sourceTree = "<group>"; };
+		A83B1E0C2D32194C008C9E26 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A83B1E0E2D3219D9008C9E26 /* UserGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideView.swift; sourceTree = "<group>"; };
+		A83B1E102D322470008C9E26 /* HamburgerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenu.swift; sourceTree = "<group>"; };
+		A83B1E402D35ED85008C9E26 /* QuickStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartView.swift; sourceTree = "<group>"; };
+		A83B1E422D35F3AD008C9E26 /* GamePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayView.swift; sourceTree = "<group>"; };
+		A83B1E442D35F4DB008C9E26 /* SolvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolvingView.swift; sourceTree = "<group>"; };
+		A86C3C672D2E1A42003237CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A86C3C692D2E1AAF003237CE /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		A86CE4F02D48270800B81E9F /* ClueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueButtonView.swift; sourceTree = "<group>"; };
+		A8796B142D26FEFD00C79DF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUESSITGOODApp.swift; sourceTree = "<group>"; };
+		A8AF29F12D210E8C00DE537F /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		A8EB4CC22D0C70A6003971D8 /* GUESSITGOOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUESSITGOOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A8BC35D72D3A619200C0EE1A /* Exceptions for "GUESSITGOOD" folder in "GUESSITGOOD" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A8EB4CC12D0C70A6003971D8 /* GUESSITGOOD */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A88748682D11EFC0006A579F /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A8EB4CC42D0C70A6003971D8 /* GUESSITGOOD */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A8BC35D72D3A619200C0EE1A /* Exceptions for "GUESSITGOOD" folder in "GUESSITGOOD" target */,
+			);
+			path = GUESSITGOOD;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8EB4CBF2D0C70A6003971D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86C3C662D2E1A20003237CE /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8EB4CB92D0C70A6003971D8 = {
+			isa = PBXGroup;
+			children = (
+				A86CE4F02D48270800B81E9F /* ClueButtonView.swift */,
+				A83B1E442D35F4DB008C9E26 /* SolvingView.swift */,
+				A83B1E422D35F3AD008C9E26 /* GamePlayView.swift */,
+				A83B1E402D35ED85008C9E26 /* QuickStartView.swift */,
+				A83B1E102D322470008C9E26 /* HamburgerMenu.swift */,
+				A83B1E0E2D3219D9008C9E26 /* UserGuideView.swift */,
+				A83B1E0C2D32194C008C9E26 /* MenuView.swift */,
+				A86C3C692D2E1AAF003237CE /* AdManager.swift */,
+				A86C3C672D2E1A42003237CE /* AppDelegate.swift */,
+				A81D72A32D2A392600C945ED /* StartFields.swift */,
+				A81D72A12D2A38F200C945ED /* GameBoard.swift */,
+				A8AF29F12D210E8C00DE537F /* SpeechManager.swift */,
+				A8796B142D26FEFD00C79DF2 /* ContentView.swift */,
+				A8796B152D26FEFD00C79DF2 /* GameViewModel.swift */,
+				A8796B172D26FEFD00C79DF2 /* GUESSITGOODApp.swift */,
+				A88748682D11EFC0006A579F /* Resources */,
+				A8EB4CC42D0C70A6003971D8 /* GUESSITGOOD */,
+				A8EB4CC32D0C70A6003971D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8EB4CC32D0C70A6003971D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8EB4CC22D0C70A6003971D8 /* GUESSITGOOD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8EB4CC12D0C70A6003971D8 /* GUESSITGOOD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8EB4CD02D0C70A7003971D8 /* Build configuration list for PBXNativeTarget "GUESSITGOOD" */;
+			buildPhases = (
+				A8EB4CBE2D0C70A6003971D8 /* Sources */,
+				A8EB4CBF2D0C70A6003971D8 /* Frameworks */,
+				A8EB4CC02D0C70A6003971D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A88748682D11EFC0006A579F /* Resources */,
+				A8EB4CC42D0C70A6003971D8 /* GUESSITGOOD */,
+			);
+			name = GUESSITGOOD;
+			packageProductDependencies = (
+				A86C3C652D2E1A20003237CE /* GoogleMobileAds */,
+			);
+			productName = GUESSITGOOD;
+			productReference = A8EB4CC22D0C70A6003971D8 /* GUESSITGOOD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8EB4CBA2D0C70A6003971D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					A8EB4CC12D0C70A6003971D8 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = A8EB4CBD2D0C70A6003971D8 /* Build configuration list for PBXProject "GUESSITGOOD" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8EB4CB92D0C70A6003971D8;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A86C3C642D2E1A20003237CE /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A8EB4CC32D0C70A6003971D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8EB4CC12D0C70A6003971D8 /* GUESSITGOOD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8EB4CC02D0C70A6003971D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8EB4CBE2D0C70A6003971D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A83B1E112D322487008C9E26 /* HamburgerMenu.swift in Sources */,
+				A83B1E452D35F4E8008C9E26 /* SolvingView.swift in Sources */,
+				A83B1E432D35F3B8008C9E26 /* GamePlayView.swift in Sources */,
+				A86C3C6A2D2E1AB8003237CE /* AdManager.swift in Sources */,
+				A8AF29F22D210EA000DE537F /* SpeechManager.swift in Sources */,
+				A8796B1D2D26FEFD00C79DF2 /* ContentView.swift in Sources */,
+				A81D72A22D2A390600C945ED /* GameBoard.swift in Sources */,
+				A83B1E412D35ED95008C9E26 /* QuickStartView.swift in Sources */,
+				A83B1E0D2D321954008C9E26 /* MenuView.swift in Sources */,
+				A86C3C682D2E1A56003237CE /* AppDelegate.swift in Sources */,
+				A81D72A42D2A393600C945ED /* StartFields.swift in Sources */,
+				A86CE4F12D48271300B81E9F /* ClueButtonView.swift in Sources */,
+				A8796B1E2D26FEFD00C79DF2 /* GameViewModel.swift in Sources */,
+				A83B1E0F2D3219E8008C9E26 /* UserGuideView.swift in Sources */,
+				A8796B1F2D26FEFD00C79DF2 /* GUESSITGOODApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A8EB4CCE2D0C70A7003971D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8EB4CCF2D0C70A7003971D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8EB4CD12D0C70A7003971D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GUESSITGOOD/GUESSITGOOD.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				"COPY_PHASE_STRIP[sdk=*]" = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				"DEBUG_INFORMATION_FORMAT[sdk=*]" = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"GUESSITGOOD/Preview Content\"";
+				DEVELOPMENT_TEAM = R5986NP344;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GUESSITGOOD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Guess It Good";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = NOlivieri.GUESSITGOOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A8EB4CD22D0C70A7003971D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GUESSITGOOD/GUESSITGOOD.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				"COPY_PHASE_STRIP[sdk=*]" = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_ASSET_PATHS = "\"GUESSITGOOD/Preview Content\"";
+				DEVELOPMENT_TEAM = R5986NP344;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GUESSITGOOD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Guess It Good";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = NOlivieri.GUESSITGOOD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8EB4CBD2D0C70A6003971D8 /* Build configuration list for PBXProject "GUESSITGOOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8EB4CCE2D0C70A7003971D8 /* Debug */,
+				A8EB4CCF2D0C70A7003971D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8EB4CD02D0C70A7003971D8 /* Build configuration list for PBXNativeTarget "GUESSITGOOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8EB4CD12D0C70A7003971D8 /* Debug */,
+				A8EB4CD22D0C70A7003971D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A86C3C642D2E1A20003237CE /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A86C3C652D2E1A20003237CE /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A86C3C642D2E1A20003237CE /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A8EB4CBA2D0C70A6003971D8 /* Project object */;
+}
