@@ -84,105 +84,122 @@ struct ContentView: View {
                                     // 🔹 Player Turn Indicator (Raised Higher)
                                     
                                     if let currentPlayer = viewModel.currentPlayer {
-                                                        Text("\(currentPlayer.name)'s Turn")
-                                                            .font(.system(size: geometry.size.width * 0.05))
-                                                            .fontWeight(.bold)
-                                                            .foregroundColor(.red)
-                                                            .padding(.bottom, geometry.size.height * 0.06)
-                                                    }
-                                                    
-                                                    // Clue Button & Category Display
-                                                    if !viewModel.category.isEmpty {
-                                                        VStack {
-                                                            if viewModel.categoryRevealed {
-                                                                Text(viewModel.category)
-                                                                    .font(.system(size: geometry.size.width * 0.05, weight: .bold))
-                                                                    .foregroundColor(.black)
-                                                            } else {
-                                                                Button(action: {
-                                                                    viewModel.revealCategory()
-                                                                }) {
-                                                                    Text("CLUE")
-                                                                        .font(.system(size: 12))
-                                                                        .fontWeight(.bold)
-                                                                        .foregroundColor(.white)
-                                                                        .padding(.horizontal, 8)
-                                                                        .padding(.vertical, 4)
-                                                                        .background(Color.blue)
-                                                                        .cornerRadius(5)
-                                                                }
-                                                            }
-                                                        }
-                                                        .offset(y: geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.04 : -0.05))
-                                                    }
-                                   
-                                        // 🔹 Gameboard (Position Adjusted)
-                                        ResponsiveGameBoardView()
-                                            .padding(.horizontal, geometry.size.width * 0.03) // ✅ Keep horizontal padding
-                                                .frame(maxHeight: geometry.size.height * 0.45) // ✅ Increase height
-                                                .offset(y: geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.07 : -0.12)) // ✅ Move game board higher
-                                        Spacer(minLength: geometry.size.height * 0.02)
+                                        Text("\(currentPlayer.name)'s Turn")
+                                            .font(.system(size: geometry.size.width * 0.05))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.red)
+                                            .padding(.bottom, geometry.size.height * 0.06)
                                     }
+                                    
+                                    // Clue Button & Category Display
+                                    if !viewModel.category.isEmpty {
+                                        VStack {
+                                            if viewModel.categoryRevealed {
+                                                Text(viewModel.category)
+                                                    .font(.system(size: geometry.size.width * 0.05, weight: .bold))
+                                                    .foregroundColor(.black)
+                                            } else {
+                                                Button(action: {
+                                                    viewModel.revealCategory()
+                                                }) {
+                                                    Text("CLUE")
+                                                        .font(.system(size: 12))
+                                                        .fontWeight(.bold)
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 8)
+                                                        .padding(.vertical, 4)
+                                                        .background(Color.blue)
+                                                        .cornerRadius(5)
+                                                }
+                                            }
+                                        }
+                                        .offset(y: geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.04 : -0.05))
+                                    }
+                                    
+                                    // 🔹 Gameboard (Position Adjusted)
+                                    ResponsiveGameBoardView()
+                                        .padding(.horizontal, geometry.size.width * 0.03) // ✅ Keep horizontal padding
+                                        .frame(maxHeight: geometry.size.height * 0.45) // ✅ Increase height
+                                        .offset(y: geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.07 : -0.12)) // ✅ Move game board higher
+                                    Spacer(minLength: geometry.size.height * 0.02)
                                 }
                             }
-                            // 🔹 Keyboard (Adjusted Height & Padding)
-                            
-                                CustomKeyboardView(
-                                    onLetterSelect: { letter in
-                                        viewModel.selectPendingLetter(letter)
-                                    },
-                                    onEnterPress: { viewModel.confirmPendingLetter() },
-                                    guessedLetters: viewModel.guessedLetters
-                                )
-                                .frame(height: geometry.size.height * 0.23)
-                                .padding(.top, geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.10 : 0.53 )) // iPad gets raised much higher - was at .10
-                                .padding(.bottom, geometry.size.height * 0.07) // Increased padding below
-                            
-                            // 🔹 Solve and Play Again Buttons
+                        }
+                        // 🔹 Keyboard (Adjusted Height & Padding)
                         
-                            VStack(spacing: geometry.size.height * 0.01) {
-                                Spacer()
-                                HStack(spacing: geometry.size.width * 0.03) {
-                                    Button("Solve") {
-                                        viewModel.initiateSolvePuzzle()
-                                    }
-                                    .font(.system(size: geometry.size.width * 0.04, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .frame(width: geometry.size.width * 0.31, height: geometry.size.height * 0.04)
-                                    .background(Color.green)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 3)
-                                    
-                                    Button("Play Again") {
-                                        viewModel.handleRestart()
-                                    }
-                                    .disabled(!viewModel.checkIfSeriesOver())
-                                    .font(.system(size: geometry.size.width * 0.04, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .frame(width: geometry.size.width * 0.31, height: geometry.size.height * 0.04)
-                                    .background(Color.red.opacity(!viewModel.checkIfSeriesOver() ? 0.5 : 1.0))
-                                    .cornerRadius(10)
-                                    .shadow(radius: 3)
+                        CustomKeyboardView(
+                            onLetterSelect: { letter in
+                                viewModel.selectPendingLetter(letter)
+                            },
+                            onEnterPress: { viewModel.confirmPendingLetter() },
+                            guessedLetters: viewModel.guessedLetters
+                        )
+                        .frame(height: geometry.size.height * 0.23)
+                        .padding(.top, geometry.size.height * (UIDevice.current.userInterfaceIdiom == .pad ? -0.10 : 0.53 )) // iPad gets raised much higher - was at .10
+                        .padding(.bottom, geometry.size.height * 0.07) // Increased padding below
+                        
+                        // 🔹 Solve and Play Again Buttons
+                        
+                        VStack(spacing: geometry.size.height * 0.01) {
+                            Spacer()
+                            HStack(spacing: geometry.size.width * 0.03) {
+                                Button("Solve") {
+                                    viewModel.initiateSolvePuzzle()
                                 }
+                                .font(.system(size: geometry.size.width * 0.04, weight: .bold))
+                                .foregroundColor(.white)
+                                .frame(width: geometry.size.width * 0.31, height: geometry.size.height * 0.04)
+                                .background(Color.green)
+                                .cornerRadius(10)
+                                .shadow(radius: 3)
                                 
-                                // 🔹 Toggles for Sounds & Voice
-                                VStack(spacing: geometry.size.height * 0.005) {
-                                    Toggle("Game Sounds", isOn: $viewModel.isMusicEnabled)
-                                        .toggleStyle(SwitchToggleStyle(tint: .blue))
-                                        .scaleEffect(geometry.size.width * 0.0017)
-
-                                    Toggle("Voice", isOn: $viewModel.isSpeechEnabled)
-                                        .toggleStyle(SwitchToggleStyle(tint: .green))
-                                        .scaleEffect(geometry.size.width * 0.0017)
+                                Button("Play Again") {
+                                    viewModel.handleRestart()
                                 }
+                                .disabled(!viewModel.checkIfSeriesOver())
+                                .font(.system(size: geometry.size.width * 0.04, weight: .bold))
+                                .foregroundColor(.white)
+                                .frame(width: geometry.size.width * 0.31, height: geometry.size.height * 0.04)
+                                .background(Color.red.opacity(!viewModel.checkIfSeriesOver() ? 0.5 : 1.0))
+                                .cornerRadius(10)
+                                .shadow(radius: 3)
+                            }
+                            
+                            // 🔹 Toggles for Sounds & Voice
+                            VStack(spacing: geometry.size.height * 0.005) {
+                                Toggle("Game Sounds", isOn: $viewModel.isMusicEnabled)
+                                    .toggleStyle(SwitchToggleStyle(tint: .blue))
+                                    .scaleEffect(geometry.size.width * 0.0017)
+                                
+                                Toggle("Voice", isOn: $viewModel.isSpeechEnabled)
+                                    .toggleStyle(SwitchToggleStyle(tint: .green))
+                                    .scaleEffect(geometry.size.width * 0.0017)
                             }
                         }
                     }
                 }
             }
         }
-}
-
+        if viewModel.isFirstTurn && viewModel.phase == .waitingForWheel && !viewModel.showWheel {
+            VStack {
+                Spacer()
+                Button("Wheel") {
+                    viewModel.showWheel = true
+                }
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(Color.orange)
+                .cornerRadius(8)
+                .padding(.bottom, 20)
+            }
+        }
+            .sheet(isPresented: $viewModel.showWheel) {
+                WheelView(viewModel: viewModel)
+            }
+    }
+    
     
     
     
@@ -323,15 +340,15 @@ struct ContentView: View {
             }
         }
     }
-
     
-            struct ContentView_Previews: PreviewProvider {
-                static var previews: some View {
-                    ContentView()
-                        .environmentObject(GameViewModel()) // Add this line
-                        
-                }
-            }
-        
     
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+                .environmentObject(GameViewModel()) // Add this line
+            
+        }
+    }
+    
+}
 

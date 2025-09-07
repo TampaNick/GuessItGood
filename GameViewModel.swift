@@ -69,6 +69,7 @@ class GameViewModel: ObservableObject {
     @Published var showClue: Bool = false
     @Published var currentWheelValue: Int?
     @Published var speakWheelResult: Bool = false
+    @Published var isFirstTurn: Bool = true
     
     // Call this when the game starts
         func resetClueButton() {
@@ -169,8 +170,26 @@ class GameViewModel: ObservableObject {
         case clue
     }
 
+    private func announceCurrentPlayer(starting: Bool) {
+        guard let player = currentPlayer else { return }
+        guard isSpeechEnabled else { return }
+        if starting {
+            speechManager.speak("\(player.name), please press the tab to show the Wheel and spin it to start the game.")
+        } else {
+            speechManager.speak("\(player.name), spin the wheel.")
+        }
+    }
+
+    func startFirstTurn() {
+        phase = .waitingForWheel
+        showWheel = false
+        announceCurrentPlayer(starting: true)
+    }
+
     func startNewTurn() {
         phase = .waitingForWheel
+        showWheel = false
+        announceCurrentPlayer(starting: false)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.showWheel = true
         }
@@ -178,6 +197,7 @@ class GameViewModel: ObservableObject {
 
     func spinWheel() {
         phase = .spinning
+        isFirstTurn = false
         let outcomes: [WheelOutcome] = [.points(100), .points(200), .points(300), .clue]
         if let result = outcomes.randomElement() {
             handleWheelStop(result)
@@ -344,9 +364,9 @@ class GameViewModel: ObservableObject {
         
         // Debug information
         print("Game Initialized. Active Indices: \(activeIndices.keys.sorted())")
-        phase = .idle
-        showWheel = false
         currentWheelValue = nil
+        isFirstTurn = true
+        startFirstTurn()
     }
     
     
