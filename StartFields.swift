@@ -60,6 +60,8 @@ struct StartFields: View {
                                     Text("How Many Players?")
                                         .font(.headline)
                                         .foregroundColor(.white)
+                                        .padding(.horizontal, 3) // makes the background wider
+                                        .padding(.vertical, 8)    // makes it taller
                                         .background(Color.blue)
                                         .cornerRadius(8)
 
