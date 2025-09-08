@@ -57,6 +57,7 @@ class GameViewModel: ObservableObject {
     @Published var isPlayAgainButtonEnabled: Bool = false
     @Published var gameInProgress: Bool = false // New property
     @Published var isAdShown = false // New flag
+    private var isPreparingGame = false // Prevents duplicate preparation calls
 
     enum TurnPhase {
         case idle
@@ -459,6 +460,7 @@ class GameViewModel: ObservableObject {
         gameInProgress = true // start the next game - updated by chat because of dual Solve/Play Again button
         categoryRevealed = false
         isFirstTurn = true
+        isPreparingGame = false
         print("Resetting game state.")
         startFirstTurn()
     }
@@ -705,9 +707,14 @@ class GameViewModel: ObservableObject {
     }
 
     private func prepareNextGame() {
+        // Prevent multiple invocations from triggering duplicate announcements
+        guard !isPreparingGame else { return }
+            isPreparingGame = true
+        
         // Ensure we do not start a new game if the series has already ended
         guard currentGame < totalGames else {
             print("All games completed. No further games.")
+            isPreparingGame = false
             return
         }
 
@@ -720,10 +727,12 @@ class GameViewModel: ObservableObject {
         // Announce the leader after every game once at least two games have been played
         if self.gamesPlayed >= 2 {
             self.announceLeader { [weak self] in
+                self?.isPreparingGame = false
                 self?.resetGame()
             }
         } else {
             self.resetGame()
+            isPreparingGame = false
         }
     }
     
