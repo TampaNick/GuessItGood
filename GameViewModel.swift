@@ -686,29 +686,18 @@ class GameViewModel: ObservableObject {
             print("Game solved. Preparing to show interstitial ad.")
             print("Attempting to show ad. isAdShown: \(isAdShown)")
 
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
                     print("Interstitial ad is ready. Showing now.")
                     AdManager.shared.showInterstitialAd(from: rootVC)
-                } else {
-                    print("Ad is not ready or root view controller not found.")
-                }
-            }
-
-            // Proceed to the next game after ad
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                print("Resetting game for next round.")
-                print("Current game index: \(self.currentGame)")
-                self.currentGame += 1
-                self.gamesPlayed += 1
-                self.resetGame()
-                self.isAdShown = false // Reset for the next game
-
-                if self.gamesPlayed == 2 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        self.announceLeader {}
+                    // Allow time for the ad before continuing
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        self.prepareNextGame()
                     }
+                } else {
+                    print("Ad is not ready or root view controller not found. Resetting immediately.")
+                    self.prepareNextGame()
                 }
             }
         } else {
@@ -717,6 +706,22 @@ class GameViewModel: ObservableObject {
             self.gamesPlayed += 1
             self.resetGame()
             self.isAdShown = false
+        }
+    }
+
+    private func prepareNextGame() {
+        print("Resetting game for next round.")
+        print("Current game index: \(self.currentGame)")
+        self.currentGame += 1
+        self.gamesPlayed += 1
+        self.isAdShown = false // Reset for the next game
+
+        if self.gamesPlayed == 2 {
+            self.announceLeader { [weak self] in
+                self?.resetGame()
+            }
+        } else {
+            self.resetGame()
         }
     }
     
