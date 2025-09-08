@@ -31,10 +31,24 @@ struct StartFields: View {
 
                     if !viewModel.isGameStarted {
                         Text("Guess It Good!")
-                            .font(.system(size: 38))
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(8)
+                            .font(.system(size: 50, weight: .bold))
+                                .foregroundStyle(
+                                    LinearGradient(colors: [.red, .orange], startPoint: .top, endPoint: .bottom)
+                                )
+                                .overlay(
+                                    Text("Guess It Good!")
+                                        .font(.system(size: 50, weight: .bold))
+                                        .foregroundColor(.clear) // needed so stroke works
+                                        .overlay(
+                                            LinearGradient(colors: [.blue], startPoint: .top, endPoint: .bottom)
+                                                .mask(
+                                                    Text("Guess It Good!")
+                                                        .font(.system(size: 50, weight: .bold))
+                                                )
+                                        )
+                                )
+                            .shadow(color: .gray, radius: 4, x: 4, y: 4)
+                      //      .cornerRadius(8)
                             .padding(.top, 60)
                             .zIndex(1)
 
