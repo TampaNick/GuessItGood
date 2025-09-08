@@ -64,7 +64,7 @@ struct WheelView: View {
                     withAnimation(.easeOut(duration: 2)) {
                         rotation += spinAmount
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
                         let normalized = rotation.truncatingRemainder(dividingBy: 360)
                         let adjusted = (360 - normalized + 90).truncatingRemainder(dividingBy: 360)
                         let segmentSize = 360.0 / Double(segments.count)

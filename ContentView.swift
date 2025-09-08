@@ -179,21 +179,6 @@ struct ContentView: View {
                     }
                 }
             }
-            if viewModel.isFirstTurn && viewModel.phase == .waitingForWheel && !viewModel.showWheel {
-                          VStack {
-                              Spacer()
-                              Button("Wheel") {
-                                  viewModel.showWheel = true
-                              }
-                              .font(.headline)
-                              .foregroundColor(.white)
-                              .padding(.horizontal, 20)
-                              .padding(.vertical, 10)
-                              .background(Color.orange)
-                              .cornerRadius(8)
-                              .padding(.bottom, 20)
-                }
-            }
         }
             .sheet(isPresented: $viewModel.showWheel) {
                 WheelView(viewModel: viewModel)

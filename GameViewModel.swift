@@ -68,7 +68,6 @@ class GameViewModel: ObservableObject {
     @Published var showWheel: Bool = false
     @Published var showClue: Bool = false
     @Published var currentWheelValue: Int?
-    @Published var speakWheelResult: Bool = false
     @Published var isFirstTurn: Bool = true
     
     // Call this when the game starts
@@ -174,7 +173,7 @@ class GameViewModel: ObservableObject {
         guard let player = currentPlayer else { return }
         guard isSpeechEnabled else { return }
         if starting {
-            speechManager.speak("\(player.name), please press the tab to show the Wheel and spin it to start the game.")
+            speechManager.speak("\(player.name), spin the wheel to start the game.")
         } else {
             speechManager.speak("\(player.name), spin the wheel.")
         }
@@ -184,6 +183,9 @@ class GameViewModel: ObservableObject {
         phase = .waitingForWheel
         showWheel = false
         announceCurrentPlayer(starting: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showWheel = true
+        }
     }
 
     func startNewTurn() {
@@ -204,7 +206,7 @@ class GameViewModel: ObservableObject {
         switch outcome {
         case .points(let value):
             currentWheelValue = value
-            if speakWheelResult {
+            if isSpeechEnabled {
                 speechManager.speak("You landed on \(value)")
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -214,7 +216,7 @@ class GameViewModel: ObservableObject {
         case .clue:
             revealCategory()
             showClue = true
-            if speakWheelResult {
+            if isSpeechEnabled {
                 speechManager.speak("You landed on clue")
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -421,7 +423,9 @@ class GameViewModel: ObservableObject {
         isPlayAgainButtonEnabled = false // Set button enabled when game solved
         gameInProgress = true // start the next game - updated by chat because of dual Solve/Play Again button
         categoryRevealed = false
+        isFirstTurn = true
         print("Resetting game state.")
+        startFirstTurn()
     }
     
     func loadPhrases() {
