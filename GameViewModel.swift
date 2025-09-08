@@ -167,6 +167,8 @@ class GameViewModel: ObservableObject {
     enum WheelOutcome {
         case points(Int)
         case clue
+        case loseTurn
+        case bankrupt
     }
 
     private func announceCurrentPlayer(starting: Bool) {
@@ -222,6 +224,30 @@ class GameViewModel: ObservableObject {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showWheel = false
                 self.phase = .resolving
+            }
+        case .loseTurn:
+            currentWheelValue = nil
+            if isSpeechEnabled {
+                speechManager.speak("Lose a turn")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWheel = false
+                self.moveToNextPlayer()
+                self.startNewTurn()
+            }
+        case .bankrupt:
+            currentWheelValue = nil
+            if let current = self.currentPlayer,
+               let index = self.players.firstIndex(where: { $0.id == current.id }) {
+                self.players[index].totalScore = 0
+            }
+            if isSpeechEnabled {
+                speechManager.speak("Bankrupt")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWheel = false
+                self.moveToNextPlayer()
+                self.startNewTurn()
             }
         }
     }

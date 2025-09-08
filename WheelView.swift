@@ -12,7 +12,9 @@ struct WheelView: View {
         (.orange, "500"),
         (.purple, "600"),
         (.pink, "700"),
-        (.gray, "CLUE")
+        (.gray, "CLUE"),
+        (.brown, "LOSE A TURN"),
+        (.black, "BANKRUPT")
     ]
 
     var body: some View {
@@ -42,7 +44,7 @@ struct WheelView: View {
                             ForEach(0..<segments.count, id: \.self) { index in
                                 Text(segments[index].1)
                                     .font(.caption)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(segments[index].1 == "BANKRUPT" ? .white : .black)
                                     .rotationEffect(.degrees(-rotation))
                                     .position(position(for: index, in: wheelSize))
                             }
@@ -71,7 +73,17 @@ struct WheelView: View {
                         let segmentSize = 360.0 / Double(segments.count)
                         let index = Int(adjusted / segmentSize) % segments.count
                         let value = segments[index].1
-                        let outcome: GameViewModel.WheelOutcome = value == "CLUE" ? .clue : .points(Int(value) ?? 0)
+                        let outcome: GameViewModel.WheelOutcome
+                        switch value {
+                        case "CLUE":
+                            outcome = .clue
+                        case "LOSE A TURN":
+                            outcome = .loseTurn
+                        case "BANKRUPT":
+                            outcome = .bankrupt
+                        default:
+                            outcome = .points(Int(value) ?? 0)
+                        }
                         viewModel.handleWheelStop(outcome)
                     }
                 }
