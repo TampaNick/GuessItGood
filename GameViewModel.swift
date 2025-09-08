@@ -46,7 +46,6 @@ class GameViewModel: ObservableObject {
     @Published var currentGame: Int = 1
     @Published var totalGames: Int = 1
     @Published var gamesRequested: Int = 1
-    @Published var gamesPlayed: Int = 0
     @Published var currentPlayerIndex: Int = 0
     @Published var phrase: String = ""
     @Published var category: String = ""
@@ -57,7 +56,6 @@ class GameViewModel: ObservableObject {
     @Published var isPlayAgainButtonEnabled: Bool = false
     @Published var gameInProgress: Bool = false // New property
     @Published var isAdShown = false // New flag
-    private var isPreparingGame = false // Prevents duplicate preparation calls
 
     enum TurnPhase {
         case idle
@@ -187,6 +185,7 @@ class GameViewModel: ObservableObject {
     }
 
     func startFirstTurn() {
+        guard phase != .waitingForWheel else { return }
         phase = .waitingForWheel
         showWheel = false
         announceCurrentPlayer(starting: true)
@@ -196,6 +195,7 @@ class GameViewModel: ObservableObject {
     }
 
     func startNewTurn() {
+        guard phase != .waitingForWheel else { return }
         phase = .waitingForWheel
         showWheel = false
         announceCurrentPlayer(starting: false)
@@ -299,12 +299,12 @@ class GameViewModel: ObservableObject {
                 speechManager.speak("\(occurrences) \(occurrences == 1 ? "letter" : "letters") \(letter).")
             }
             if let currentPlayer = currentPlayer,
-               let index = players.firstIndex(where: { $0.id == currentPlayer.id }),
-               let wheelValue = currentWheelValue {
-                let letterValue = letterScores[letter] ?? 0
-                let pointsEarned = occurrences * (wheelValue + letterValue)
-                players[index].totalScore += pointsEarned
-            }
+                        let index = players.firstIndex(where: { $0.id == currentPlayer.id }) {
+                        let wheelValue = currentWheelValue ?? 0
+                        let letterValue = letterScores[letter] ?? 0
+                        let pointsEarned = occurrences * (wheelValue + letterValue)
+                        players[index].totalScore += pointsEarned
+                       }
         } else {
             playSound(named: "Buzzer", withExtension: "wav")
             if isSpeechEnabled { // Check if speech is enabled before speaking
@@ -417,7 +417,6 @@ class GameViewModel: ObservableObject {
         let validNumber = max(1, number)
         totalGames = validNumber
         gamesRequested = validNumber
-        gamesPlayed = 0
         print("Number of Games: \(totalGames)")
     }
 
@@ -427,7 +426,6 @@ class GameViewModel: ObservableObject {
         totalGames = 1
         gamesRequested = 1
         currentGame = 1
-        gamesPlayed = 0
         guessedLetters.removeAll()
         activeIndices.removeAll()
         pendingLetter = nil
@@ -454,7 +452,6 @@ class GameViewModel: ObservableObject {
         gameInProgress = true // start the next game - updated by chat because of dual Solve/Play Again button
         categoryRevealed = false
         isFirstTurn = true
-        isPreparingGame = false
         print("Resetting game state.")
         startFirstTurn()
     }
@@ -590,7 +587,7 @@ class GameViewModel: ObservableObject {
                 print("Next round starts with Player \(currentPlayerIndex + 1).")
             }
 
-            // Use unified end-game flow which also handles ads and leader announcements
+            // Use unified end-game flow which also handles ads
             endGame()
         } else {
             print("Incorrect solution! Passing turn to the next player.")
@@ -620,21 +617,6 @@ class GameViewModel: ObservableObject {
         gameInProgress = true
     }
 
-    private func announceLeader(completion: @escaping () -> Void) {
-        guard let leader = players.max(by: { $0.totalScore < $1.totalScore }) else {
-            completion()
-            return
-        }
-        let message = "Congratulations \(leader.name)! You are in the lead at this point, with \(leader.totalScore) points scored. Good luck to everyone for a good game."
-        if isSpeechEnabled {
-            speechManager.speak(message) {
-                completion()
-            }
-        } else {
-            completion()
-        }
-    }
-
     // Modified endGame function to include ads after each game
     func endGame() {
         print("Checking if game is solved: \(checkIfGameSolved())")
@@ -648,8 +630,6 @@ class GameViewModel: ObservableObject {
             // Series is over, show series-end ad
             isAdShown = true
             print("Series is over. Preparing to show interstitial ad.")
-
-            gamesPlayed += 1
 
             // Proceed once the ad is dismissed
             AdManager.shared.onAdDismissed = { [weak self] in
@@ -669,65 +649,49 @@ class GameViewModel: ObservableObject {
                 }
             }
         } else if checkIfGameSolved() {
-            // Single game solved, show game-end ad
-            isAdShown = true
-            print("Game solved. Preparing to show interstitial ad.")
-            print("Attempting to show ad. isAdShown: \(isAdShown)")
+                    // Single game solved, show game-end ad
+                    isAdShown = true
+                    print("Game solved. Preparing to show interstitial ad.")
+                    print("Attempting to show ad. isAdShown: \(isAdShown)")
 
-            // Proceed to the next game only after the ad is dismissed
-            AdManager.shared.onAdDismissed = { [weak self] in
-                self?.prepareNextGame()
-                AdManager.shared.onAdDismissed = nil
-            }
+                    // Proceed to the next game only after the ad is dismissed
+                    AdManager.shared.onAdDismissed = { [weak self] in
+                        self?.prepareNextGame()
+                        AdManager.shared.onAdDismissed = nil
+                    }
 
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
-                    print("Interstitial ad is ready. Showing now.")
-                    AdManager.shared.showInterstitialAd(from: rootVC)
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
+                        if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
+                            print("Interstitial ad is ready. Showing now.")
+                            AdManager.shared.showInterstitialAd(from: rootVC)
+                        } else {
+                            print("Ad is not ready or root view controller not found. Resetting immediately.")
+                            AdManager.shared.onAdDismissed = nil
+                            self.prepareNextGame()
+                        }
+                    }
                 } else {
-                    print("Ad is not ready or root view controller not found. Resetting immediately.")
-                    AdManager.shared.onAdDismissed = nil
-                    self.prepareNextGame()
-                }
-            }
-        } else {
-            print("Ad is not ready or root view controller not found. Resetting game.")
+                    print("Ad is not ready or root view controller not found. Resetting game.")
+                
             self.currentGame += 1
-            self.gamesPlayed += 1
             self.resetGame()
             self.isAdShown = false
         }
     }
 
     private func prepareNextGame() {
-        // Prevent multiple invocations from triggering duplicate announcements
-        guard !isPreparingGame else { return }
-            isPreparingGame = true
-        
         // Ensure we do not start a new game if the series has already ended
         guard currentGame < totalGames else {
             print("All games completed. No further games.")
-            isPreparingGame = false
             return
         }
 
         print("Resetting game for next round.")
         print("Current game index: \(self.currentGame)")
         self.currentGame += 1
-        self.gamesPlayed += 1
         self.isAdShown = false // Reset for the next game
-
-        // Announce the leader after every game once at least two games have been played
-        if self.gamesPlayed >= 2 {
-            self.announceLeader { [weak self] in
-                self?.isPreparingGame = false
-                self?.resetGame()
-            }
-        } else {
-            self.resetGame()
-            isPreparingGame = false
-        }
+        self.resetGame()
     }
     
     
