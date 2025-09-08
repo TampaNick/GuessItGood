@@ -279,9 +279,10 @@ class GameViewModel: ObservableObject {
             if let currentPlayer = currentPlayer,
                let index = players.firstIndex(where: { $0.id == currentPlayer.id }),
                let wheelValue = currentWheelValue {
-                players[index].totalScore += wheelValue
+                let letterValue = letterScores[letter] ?? 0
+                let pointsEarned = occurrences * (wheelValue + letterValue)
+                players[index].totalScore += pointsEarned
             }
-            currentWheelValue = nil
         } else {
             playSound(named: "Buzzer", withExtension: "wav")
             if isSpeechEnabled { // Check if speech is enabled before speaking
