@@ -15,6 +15,7 @@ class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     private var currentPhrase: String?
     private var currentCategory: String?
     private var completion: (() -> Void)?
+    private var lastSpokenText: String?
 
     override init() {
         super.init()
@@ -38,10 +39,16 @@ class SpeechManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     func reset() {
         currentPhrase = nil
         currentCategory = nil
+        lastSpokenText = nil
     }
 
     // Function to speak text with customization options
     func speak(_ text: String, language: String = "en-US", rate: Float = 0.4, pitch: Float = 1.4, completion: (() -> Void)? = nil) {
+        guard text != lastSpokenText else {
+                   completion?()
+                   return
+               }
+               lastSpokenText = text
         self.completion = completion
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: language)

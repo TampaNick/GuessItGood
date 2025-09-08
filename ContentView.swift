@@ -98,7 +98,7 @@ struct ContentView: View {
                                                 Text(viewModel.category)
                                                     .font(.system(size: geometry.size.width * 0.05, weight: .bold))
                                                     .foregroundColor(.black)
-                                            } else {
+                                            } else if viewModel.clueButtonVisible {
                                                 Button(action: {
                                                     viewModel.revealCategory()
                                                 }) {

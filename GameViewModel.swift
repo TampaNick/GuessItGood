@@ -66,22 +66,24 @@ class GameViewModel: ObservableObject {
         case resolving
         case guessing
     }
-
     @Published var phase: TurnPhase = .idle
     @Published var showWheel: Bool = false
-    @Published var showClue: Bool = false
+    @Published var clueButtonVisible: Bool = false
     @Published var currentWheelValue: Int?
     @Published var isFirstTurn: Bool = true
+    private var nextStartingPlayerIndex: Int = 0
     
     // Call this when the game starts
         func resetClueButton() {
             categoryRevealed = false
+            clueButtonVisible = false
         }
     // Function to reveal the category when CLUE is pressed
     func revealCategory() {
         guard !categoryRevealed else { return } // Prevent multiple activations
 
         categoryRevealed = true
+        clueButtonVisible = false
 
         if isSpeechEnabled {
             speechManager.speak("The clue is \(category).")
@@ -219,14 +221,13 @@ class GameViewModel: ObservableObject {
                 self.phase = .guessing
             }
         case .clue:
-            revealCategory()
-            showClue = true
+            clueButtonVisible = true
             if isSpeechEnabled {
                 speechManager.speak("You landed on clue")
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showWheel = false
-                self.phase = .resolving
+                self.phase = .guessing
             }
         case .loseTurn:
             currentWheelValue = nil
@@ -255,14 +256,6 @@ class GameViewModel: ObservableObject {
         }
     }
 
-    func dismissClue() {
-        showClue = false
-        phase = .guessing
-    }
-    
-
-  
-    
     // MARK: - Computed Property
     var currentPlayer: Player? {
         players.indices.contains(currentPlayerIndex) ? players[currentPlayerIndex] : nil
@@ -373,7 +366,7 @@ class GameViewModel: ObservableObject {
         // 4. Reset game-specific properties
         guessedLetters.removeAll()
         pendingLetter = nil
-        currentPlayerIndex = 0
+        currentPlayerIndex = nextStartingPlayerIndex % max(players.count, 1)
         currentGame = 1
         winnerMessage = nil
         isPlayAgainButtonEnabled = false
@@ -407,6 +400,7 @@ class GameViewModel: ObservableObject {
         players = (1...validNumber).map { index in
             Player(id: index, name: players.indices.contains(index - 1) ? players[index - 1].name : "Player \(index)")
         }
+        nextStartingPlayerIndex = nextStartingPlayerIndex % players.count
         print("Number of Players: \(players.count)")
     }
     
@@ -455,7 +449,7 @@ class GameViewModel: ObservableObject {
         activeIndices.removeAll()
         selectRandomPhrase()
         calculateActiveIndices()
-        currentPlayerIndex = 0 // Ensure the first player starts each game
+        currentPlayerIndex = nextStartingPlayerIndex % players.count
         isPlayAgainButtonEnabled = false // Set button enabled when game solved
         gameInProgress = true // start the next game - updated by chat because of dual Solve/Play Again button
         categoryRevealed = false
@@ -560,7 +554,6 @@ class GameViewModel: ObservableObject {
     func isVowel(_ letter: Character) -> Bool {
         return "AEIOU".contains(letter)
     }
-    
     func evaluatePuzzleSolution(_ solution: String) {   //made public from internal so I can use it in Content View
         //Let solution be a trimmed solution
         let solution = solution.trimmingCharacters(in: .whitespaces)
@@ -579,10 +572,11 @@ class GameViewModel: ObservableObject {
             if let currentPlayer = currentPlayer {
                 print("Player \(currentPlayerIndex + 1)'s total score: \(currentPlayer.totalScore)")
             }
-            
             guessedLetters = Set(activeIndices.values)
         //    playSound(named: "Cheering")  //was commented out
+      
             
+            nextStartingPlayerIndex = (currentPlayerIndex + 1) % players.count
             if currentGame == totalGames {
                 let winner = players.max(by: { $0.totalScore < $1.totalScore })
                 winnerMessage = "\(winner?.name ?? "Player 1") Wins the Series!"
@@ -592,7 +586,7 @@ class GameViewModel: ObservableObject {
                     speechManager.speak("\(winner?.name ?? "Player 1") is the series winner!")
                 }
             } else {
-                currentPlayerIndex = (currentPlayerIndex + 1) % players.count
+                currentPlayerIndex = nextStartingPlayerIndex
                 print("Next round starts with Player \(currentPlayerIndex + 1).")
             }
 
