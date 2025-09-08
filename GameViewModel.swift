@@ -454,6 +454,7 @@ class GameViewModel: ObservableObject {
         activeIndices.removeAll()
         selectRandomPhrase()
         calculateActiveIndices()
+        currentPlayerIndex = 0 // Ensure the first player starts each game
         isPlayAgainButtonEnabled = false // Set button enabled when game solved
         gameInProgress = true // start the next game - updated by chat because of dual Solve/Play Again button
         categoryRevealed = false
@@ -654,13 +655,21 @@ class GameViewModel: ObservableObject {
 
             gamesPlayed += 1
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[weak self] in
+            // Proceed once the ad is dismissed
+            AdManager.shared.onAdDismissed = { [weak self] in
+                self?.handleAdDismissal()
+                AdManager.shared.onAdDismissed = nil
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
                 guard let self = self else { return }
                 if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
                     print("Series End Interstitial ad is ready. Showing now.")
                     AdManager.shared.showInterstitialAd(from: rootVC)
                 } else {
                     print("Ad is not ready or root view controller not found.")
+                    AdManager.shared.onAdDismissed = nil
+                    self.handleAdDismissal()
                 }
             }
         } else if checkIfGameSolved() {
@@ -669,17 +678,20 @@ class GameViewModel: ObservableObject {
             print("Game solved. Preparing to show interstitial ad.")
             print("Attempting to show ad. isAdShown: \(isAdShown)")
 
+            // Proceed to the next game only after the ad is dismissed
+            AdManager.shared.onAdDismissed = { [weak self] in
+                self?.prepareNextGame()
+                AdManager.shared.onAdDismissed = nil
+            }
+
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
                     print("Interstitial ad is ready. Showing now.")
                     AdManager.shared.showInterstitialAd(from: rootVC)
-                    // Allow time for the ad before continuing
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                        self.prepareNextGame()
-                    }
                 } else {
                     print("Ad is not ready or root view controller not found. Resetting immediately.")
+                    AdManager.shared.onAdDismissed = nil
                     self.prepareNextGame()
                 }
             }
