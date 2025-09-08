@@ -66,7 +66,8 @@ struct WheelView: View {
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
                         let normalized = rotation.truncatingRemainder(dividingBy: 360)
-                        let adjusted = (360 - normalized + 90).truncatingRemainder(dividingBy: 360)
+                        // Adjust for pointer orientation by adding 180 degrees
+                        let adjusted = (360 - normalized + 270).truncatingRemainder(dividingBy: 360)
                         let segmentSize = 360.0 / Double(segments.count)
                         let index = Int(adjusted / segmentSize) % segments.count
                         let value = segments[index].1
