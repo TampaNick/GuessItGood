@@ -584,34 +584,17 @@ class GameViewModel: ObservableObject {
                 let winner = players.max(by: { $0.totalScore < $1.totalScore })
                 winnerMessage = "\(winner?.name ?? "Player 1") Wins the Series!"
                 print("Series completed. Winner: \(winnerMessage ?? "No winner")")
-                
+
                 if isSpeechEnabled { // Check if speech is enabled before speaking
                     speechManager.speak("\(winner?.name ?? "Player 1") is the series winner!")
                 }
-                
-                endGame()
-                return
+            } else {
+                currentPlayerIndex = (currentPlayerIndex + 1) % players.count
+                print("Next round starts with Player \(currentPlayerIndex + 1).")
             }
-            
-            
-            currentGame += 1
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.count
-            print("Next round starts with Player \(currentPlayerIndex + 1).")
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-                self.resetGame()
-            }
-            
-            // Display game-end interstitial ad
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                if let rootVC = self.getRootViewController(), AdManager.shared.isAdReady() {
-                    print("Game-end interstitial ad is ready. Showing now.")
-                    AdManager.shared.showInterstitialAd(from: rootVC)
-                } else {
-                    print("Game-end ad not ready or root view controller not found.")
-                }
-            }
+
+            // Use unified end-game flow which also handles ads and leader announcements
+            endGame()
         } else {
             print("Incorrect solution! Passing turn to the next player.")
             playSound(named: "aww")
