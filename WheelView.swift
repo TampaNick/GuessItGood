@@ -9,11 +9,11 @@ struct WheelView: View {
         (.blue, "200"),
         (.green, "300"),
         (.yellow, "400"),
-        (.orange, "500"),
+        (.brown, "LOSE A TURN"),
         (.purple, "600"),
         (.pink, "700"),
         (.gray, "CLUE"),
-        (.brown, "LOSE A TURN"),
+        (.orange, "500"),
         (.black, "BANKRUPT")
     ]
 

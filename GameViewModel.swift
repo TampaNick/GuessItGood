@@ -242,7 +242,7 @@ class GameViewModel: ObservableObject {
                 self.players[index].totalScore = 0
             }
             if isSpeechEnabled {
-                speechManager.speak("Bankrupt")
+                speechManager.speak("Bank ruppt")
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showWheel = false
