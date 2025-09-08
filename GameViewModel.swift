@@ -632,21 +632,54 @@ class GameViewModel: ObservableObject {
     func startGame() {
         gameInProgress = true
     }
-    
+
+    private func announceLeader(completion: @escaping () -> Void) {
+        guard let leader = players.max(by: { $0.totalScore < $1.totalScore }) else {
+            completion()
+            return
+        }
+        let message = "Congratulations \(leader.name)! You are in the lead at this point, with \(leader.totalScore) points scored. Good luck to everyone for a good game."
+        if isSpeechEnabled {
+            speechManager.speak(message) {
+                completion()
+            }
+        } else {
+            completion()
+        }
+    }
+
     // Modified endGame function to include ads after each game
     func endGame() {
         print("Checking if game is solved: \(checkIfGameSolved())")
-        
+
         guard !isAdShown else {
             print("Ad already shown, skipping further actions.")
             return } // Prevent multiple ad triggers
         gameInProgress = false
-        
+
+        if currentGame >= 3 && checkIfGameSolved() {
+            isAdShown = true
+            announceLeader {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    if self.checkIfSeriesOver() {
+                        self.isAdShown = false
+                    } else {
+                        print("Resetting game for next round.")
+                        print("Current game index: \(self.currentGame)")
+                        self.currentGame += 1
+                        self.resetGame()
+                        self.isAdShown = false
+                    }
+                }
+            }
+            return
+        }
+
         if checkIfSeriesOver() {
             // Series is over, show series-end ad
             isAdShown = true
             print("Series is over. Preparing to show interstitial ad.")
-            
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[weak self] in
                 guard let self = self else { return }
                 if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
@@ -661,7 +694,7 @@ class GameViewModel: ObservableObject {
             isAdShown = true
             print("Game solved. Preparing to show interstitial ad.")
             print("Attempting to show ad. isAdShown: \(isAdShown)")
-            
+
             DispatchQueue.main.async {[weak self] in
                 guard let self = self else { return }
                 if let rootVC = getRootViewController(), AdManager.shared.isAdReady() {
@@ -671,7 +704,7 @@ class GameViewModel: ObservableObject {
                     print("Ad is not ready or root view controller not found.")
                 }
             }
-            
+
             // Proceed to the next game after ad
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                 print("Resetting game for next round.")
@@ -679,7 +712,7 @@ class GameViewModel: ObservableObject {
                 self.currentGame += 1
                 self.resetGame()
                 self.isAdShown = false // Reset for the next game
-                
+
             }
         } else {
             print("Ad is not ready or root view controller not found. Resetting game.")
