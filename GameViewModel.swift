@@ -693,13 +693,20 @@ class GameViewModel: ObservableObject {
     }
 
     private func prepareNextGame() {
+        // Ensure we do not start a new game if the series has already ended
+        guard currentGame < totalGames else {
+            print("All games completed. No further games.")
+            return
+        }
+
         print("Resetting game for next round.")
         print("Current game index: \(self.currentGame)")
         self.currentGame += 1
         self.gamesPlayed += 1
         self.isAdShown = false // Reset for the next game
 
-        if self.gamesPlayed == 2 {
+        // Announce the leader after every game once at least two games have been played
+        if self.gamesPlayed >= 2 {
             self.announceLeader { [weak self] in
                 self?.resetGame()
             }
