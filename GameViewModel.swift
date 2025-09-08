@@ -45,6 +45,8 @@ class GameViewModel: ObservableObject {
     @Published var players: [Player] = []
     @Published var currentGame: Int = 1
     @Published var totalGames: Int = 1
+    @Published var gamesRequested: Int = 1
+    @Published var gamesPlayed: Int = 0
     @Published var currentPlayerIndex: Int = 0
     @Published var phrase: String = ""
     @Published var category: String = ""
@@ -417,15 +419,20 @@ class GameViewModel: ObservableObject {
     //      }
     
     func setNumberOfGames(_ number: Int) {
-        totalGames = max(1, number)
+        let validNumber = max(1, number)
+        totalGames = validNumber
+        gamesRequested = validNumber
+        gamesPlayed = 0
         print("Number of Games: \(totalGames)")
     }
-    
+
     func handleRestart() {
         isGameStarted = false
         players.removeAll() // Clear players
         totalGames = 1
+        gamesRequested = 1
         currentGame = 1
+        gamesPlayed = 0
         guessedLetters.removeAll()
         activeIndices.removeAll()
         pendingLetter = nil
@@ -657,28 +664,12 @@ class GameViewModel: ObservableObject {
             return } // Prevent multiple ad triggers
         gameInProgress = false
 
-        if currentGame >= 3 && checkIfGameSolved() {
-            isAdShown = true
-            announceLeader {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    if self.checkIfSeriesOver() {
-                        self.isAdShown = false
-                    } else {
-                        print("Resetting game for next round.")
-                        print("Current game index: \(self.currentGame)")
-                        self.currentGame += 1
-                        self.resetGame()
-                        self.isAdShown = false
-                    }
-                }
-            }
-            return
-        }
-
         if checkIfSeriesOver() {
             // Series is over, show series-end ad
             isAdShown = true
             print("Series is over. Preparing to show interstitial ad.")
+
+            gamesPlayed += 1
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[weak self] in
                 guard let self = self else { return }
@@ -710,13 +701,20 @@ class GameViewModel: ObservableObject {
                 print("Resetting game for next round.")
                 print("Current game index: \(self.currentGame)")
                 self.currentGame += 1
+                self.gamesPlayed += 1
                 self.resetGame()
                 self.isAdShown = false // Reset for the next game
 
+                if self.gamesPlayed == 2 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.announceLeader {}
+                    }
+                }
             }
         } else {
             print("Ad is not ready or root view controller not found. Resetting game.")
             self.currentGame += 1
+            self.gamesPlayed += 1
             self.resetGame()
             self.isAdShown = false
         }
