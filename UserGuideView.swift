@@ -54,10 +54,26 @@ struct WebView: UIViewRepresentable {
        }
    }
 
-    // UserGuideView struct to show the user guide
-    struct UserGuideView: View {
+    // View for the "How to Guess It Good" section
+    struct HowToGuessItGoodView: View {
         var body: some View {
-            WebView(htmlFileName: "user_guide") // Replace with the file name without extension
+            WebView(htmlFileName: "how_to_guess_it_good")
+                .edgesIgnoringSafeArea(.all)
+        }
+    }
+
+    // Placeholder view for "The Game Wheel" section
+    struct GameWheelView: View {
+        var body: some View {
+            WebView(htmlFileName: "game_wheel")
+                .edgesIgnoringSafeArea(.all)
+        }
+    }
+
+    // View for the combined Gameboard content
+    struct GameboardView: View {
+        var body: some View {
+            WebView(htmlFileName: "gameboard")
                 .edgesIgnoringSafeArea(.all)
         }
     }

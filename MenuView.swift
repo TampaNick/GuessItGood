@@ -10,8 +10,33 @@ import SwiftUI
 struct MenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationLink(destination: UserGuideView()) {
-                Text("User Guide")
+            NavigationLink(destination: HowToGuessItGoodView()) {
+                Text("How to Guess It Good")
+                    .font(.headline)
+                    .padding(.vertical, 10)
+            }
+            NavigationLink(destination: GameWheelView()) {
+                Text("The Game Wheel")
+                    .font(.headline)
+                    .padding(.vertical, 10)
+            }
+            NavigationLink(destination: GameboardView()) {
+                Text("The Gameboard")
+                    .font(.headline)
+                    .padding(.vertical, 10)
+            }
+            NavigationLink(destination: QuickStartView()) {
+                Text("Quick Start")
+                    .font(.headline)
+                    .padding(.vertical, 10)
+            }
+            NavigationLink(destination: GamePlayView()) {
+                Text("Game Play")
+                    .font(.headline)
+                    .padding(.vertical, 10)
+            }
+            NavigationLink(destination: SolvingView()) {
+                Text("Solving")
                     .font(.headline)
                     .padding(.vertical, 10)
             }

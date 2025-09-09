@@ -37,8 +37,22 @@ struct HamburgerMenu: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
 
-                    NavigationLink(destination: UserGuideView()) {
-                        Text("User Guide")
+                    NavigationLink(destination: HowToGuessItGoodView()) {
+                        Text("How to Guess It Good")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
+                    NavigationLink(destination: GameWheelView()) {
+                        Text("The Game Wheel")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
+                    NavigationLink(destination: GameboardView()) {
+                        Text("The Gameboard")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .leading)
