@@ -4,18 +4,20 @@ struct WheelView: View {
     @ObservedObject var viewModel: GameViewModel
     @State private var rotation: Double = 0
 
-    private let segments: [(Color, String)] = [
-        (.red, "100"),
-        (.blue, "200"),
-        (.green, "300"),
-        (.yellow, "400"),
-        (.brown, "LOSE A TURN"),
-        (.purple, "600"),
-        (.pink, "700"),
-        (.gray, "CLUE"),
-        (.orange, "500"),
-        (.black, "BANKRUPT")
-    ]
+    private var segments: [(Color, String)] {
+           [
+               (.red, "100"),
+               (.blue, "200"),
+               (.green, "300"),
+               (.yellow, "400"),
+               (.brown, "LOSE A TURN"),
+               (.purple, "600"),
+               (.pink, "700"),
+               (.gray, viewModel.clueUsed ? "1000" : "CLUE"),
+               (.orange, "500"),
+               (.black, "BANKRUPT")
+           ]
+       }
 
     var body: some View {
         GeometryReader { geometry in

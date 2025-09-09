@@ -67,6 +67,7 @@ class GameViewModel: ObservableObject {
     @Published var phase: TurnPhase = .idle
     @Published var showWheel: Bool = false
     @Published var clueButtonVisible: Bool = false
+    @Published var clueUsed: Bool = false
     @Published var currentWheelValue: Int?
     @Published var isFirstTurn: Bool = true
     private var nextStartingPlayerIndex: Int = 0
@@ -75,6 +76,7 @@ class GameViewModel: ObservableObject {
         func resetClueButton() {
             categoryRevealed = false
             clueButtonVisible = false
+            clueUsed = false
         }
     // Function to reveal the category when CLUE is pressed
     func revealCategory() {
@@ -221,7 +223,11 @@ class GameViewModel: ObservableObject {
                 self.phase = .guessing
             }
         case .clue:
+            // Ensure landing on CLUE does not carry over a previous point value
+            // The slice should effectively be worth 0 the first time it is hit.
+            currentWheelValue = 0
             clueButtonVisible = true
+            clueUsed = true
             if isSpeechEnabled {
                 speechManager.speak("You landed on clue")
             }
@@ -436,6 +442,7 @@ class GameViewModel: ObservableObject {
         isPlayAgainButtonEnabled = true
         endGame()
         isAdShown = false // Reset flag
+        clueUsed = false
         // Add logic to reset game state
         print("Game has been reset. Returning to Start Game screen.")
     }
