@@ -140,8 +140,20 @@ struct ContentView: View {
                         
                         // 🔹 Solve and Play Again Buttons
                         
-                        VStack(spacing: geometry.size.height * 0.01) {
+                        VStack(alignment: .leading, spacing: geometry.size.height * 0.01) {
                             Spacer()
+                            Button(action: {
+                                viewModel.handleRestart()
+                            }) {
+                                Label("Back", systemImage: "chevron.left")
+                                    .font(.system(size: 20, weight: .semibold))
+                                    .padding(6)
+                                    .background(Color.white.opacity(0.6))
+                                    .foregroundColor(.black)
+                                    .cornerRadius(5)
+                            }
+                            .padding(.leading, geometry.size.width * 0.03)
+                            
                             HStack(spacing: geometry.size.width * 0.03) {
                                 Button("Solve") {
                                     viewModel.initiateSolvePuzzle()
@@ -164,6 +176,7 @@ struct ContentView: View {
                                 .cornerRadius(10)
                                 .shadow(radius: 3)
                             }
+                            .frame(maxWidth: .infinity, alignment: .center)
                             
                             // 🔹 Toggles for Sounds & Voice
                             VStack(spacing: geometry.size.height * 0.005) {
@@ -175,17 +188,18 @@ struct ContentView: View {
                                     .toggleStyle(SwitchToggleStyle(tint: .green))
                                     .scaleEffect(geometry.size.width * 0.0017)
                             }
+                            .frame(maxWidth: .infinity, alignment: .center)
                         }
                     }
                 }
             }
         }
-            .sheet(isPresented: $viewModel.showWheel) {
-                WheelView(viewModel: viewModel)
+        .sheet(isPresented: $viewModel.showWheel) {
+                        WheelView(viewModel: viewModel)
+                    }
             }
-    }
     
-    
+            
     
     
     
