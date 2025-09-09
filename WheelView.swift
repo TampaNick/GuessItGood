@@ -44,11 +44,20 @@ struct WheelView: View {
                                     .fill(segments[index].0)
                             }
                             ForEach(0..<segments.count, id: \.self) { index in
-                                Text(segments[index].1)
-                                    .font(.caption)
-                                    .foregroundColor(segments[index].1 == "BANKRUPT" ? .white : .black)
-                                    .rotationEffect(.degrees(-rotation))
-                                    .position(position(for: index, in: wheelSize))
+                                let label = segments[index].1
+                                        if label == "BANKRUPT" || label == "LOSE A TURN" {
+                                            Text(label)
+                                                .font(.caption)
+                                                .foregroundColor(label == "BANKRUPT" ? .white : .black)
+                                                .rotationEffect(.degrees(angleDegrees(for: index) + 180))
+                                            .position(position(for: index, in: wheelSize, radiusFactor: 0.3))
+                                        } else {
+                                            Text(label)
+                                            .font(.caption)
+                                                .foregroundColor(label == "BANKRUPT" ? .white : .black)
+                                                .rotationEffect(.degrees(-rotation))
+                                                .position(position(for: index, in: wheelSize))
+                                }
                             }
                         }
                         .frame(width: wheelSize, height: wheelSize)
@@ -101,9 +110,13 @@ struct WheelView: View {
         }
     }
 
-    private func position(for index: Int, in size: CGFloat) -> CGPoint {
+    private func angleDegrees(for index: Int) -> Double {
+        (Double(index) + 0.5) / Double(segments.count) * 360
+    }
+
+    private func position(for index: Int, in size: CGFloat, radiusFactor: CGFloat = 0.35) -> CGPoint {
         let angle = (Double(index) + 0.5) / Double(segments.count) * 2 * .pi
-        let radius = size * 0.35
+        let radius = size * radiusFactor
         return CGPoint(
             x: size / 2 + radius * CGFloat(cos(angle)),
             y: size / 2 + radius * CGFloat(sin(angle))

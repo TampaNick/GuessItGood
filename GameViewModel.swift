@@ -223,13 +223,12 @@ class GameViewModel: ObservableObject {
                 self.phase = .guessing
             }
         case .clue:
-            // Ensure landing on CLUE does not carry over a previous point value
-            // The slice should effectively be worth 0 the first time it is hit.
-            currentWheelValue = 0
+            // Landing on CLUE awards 1000 points for correct guesses
+            currentWheelValue = 1000
             clueButtonVisible = true
             clueUsed = true
             if isSpeechEnabled {
-                speechManager.speak("You landed on clue")
+                speechManager.speak("You landed on clue for 1000 points for correct letters.")
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showWheel = false
