@@ -90,6 +90,8 @@ struct StartFields: View {
                                     Text("Player \(currentPlayerIndex + 1) Name:")
                                         .font(.headline)
                                         .foregroundColor(.white)
+                                        .padding(.horizontal, 25) // makes the background wider
+                                        .padding(.vertical, 8)    // makes it taller
                                         .background(Color.blue)
                                         .cornerRadius(8)
 
@@ -141,7 +143,10 @@ struct StartFields: View {
                                     Text("Number of Games:")
                                         .font(.headline)
                                         .foregroundColor(.white)
+                                        .padding(.horizontal, 5) // makes the background wider
+                                        .padding(.vertical, 10)    // makes it taller
                                         .background(Color.blue)
+                                        .cornerRadius(8)
 
                                     TextField("Enter Total Games", value: $totalGamesInput, formatter: NumberFormatter())
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
