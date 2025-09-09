@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HamburgerMenu: View {
     @Binding var isMenuOpen: Bool // Binding to toggle the menu state
-    
+
     var body: some View {
-        ZStack {
-            // Dimmed background when the menu is open
+        ZStack(alignment: .leading) {
             if isMenuOpen {
+                // Dimmed background when the menu is open
                 Color.black.opacity(0.5)
                     .ignoresSafeArea()
                     .onTapGesture {
@@ -21,48 +21,59 @@ struct HamburgerMenu: View {
                             isMenuOpen = false
                         }
                     }
-                }
-            
-            // Menu content
-            if isMenuOpen {
-                VStack(alignment: .leading) {
+
+                // Menu content
+                VStack(alignment: .leading, spacing: 20) {
+                    Button(action: {
+                        withAnimation {
+                            isMenuOpen = false
+                        }
+                    }) {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                            Text("Back")
+                        }
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
                     NavigationLink(destination: UserGuideView()) {
                         Text("User Guide")
                             .font(.headline)
                             .foregroundColor(.white)
-                        Spacer()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    
-                    
-                    NavigationLink(destination: QuickStartView()) { /* Your destination view for Quick Start Guide */
+
+                    NavigationLink(destination: QuickStartView()) {
                         Text("Quick Start")
                             .font(.headline)
                             .foregroundColor(.white)
-                        Spacer()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    
+
                     NavigationLink(destination: GamePlayView()) {
                         Text("Game Play")
                             .font(.headline)
                             .foregroundColor(.white)
-                        Spacer()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    
+
                     NavigationLink(destination: SolvingView()) {
-                         Text("Solving")
-                        .font(.headline)
-                          .foregroundColor(.white)
-                            }
-                    
-                    
+                        Text("Solving")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
                     Spacer()
                 }
-                        .frame(maxWidth: 200)
-                        .background(Color.gray)
-                        .transition(.move(edge: .leading))
-                        .animation(.easeInOut, value: isMenuOpen)
-                }
+                .padding()
+                .frame(width: UIScreen.main.bounds.width * 0.8, alignment: .leading)
+                .background(Color.gray)
+                .transition(.move(edge: .leading))
             }
         }
+        .animation(.easeInOut, value: isMenuOpen)
     }
+}
 
