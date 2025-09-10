@@ -580,9 +580,13 @@ class GameViewModel: ObservableObject {
                 players[index].roundScore += remainingScore
             }
             
+            
             print("Remaining points added: \(remainingScore)")
             if let currentPlayer = currentPlayer {
                 print("Player \(currentPlayerIndex + 1)'s total score: \(currentPlayer.totalScore + currentPlayer.roundScore)")
+                if isSpeechEnabled {
+                    speechManager.speak("\(currentPlayer.name) wins the round!")
+                }
             }
             guessedLetters = Set(activeIndices.values)
             //    playSound(named: "Cheering")  //was commented out
