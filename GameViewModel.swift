@@ -445,7 +445,7 @@ class GameViewModel: ObservableObject {
         category = ""
         winnerMessage = nil
         currentPlayerIndex = 0
-        isPlayAgainButtonEnabled = true
+        isPlayAgainButtonEnabled = false
         endGame()
         isAdShown = false // Reset flag
         clueUsed = false

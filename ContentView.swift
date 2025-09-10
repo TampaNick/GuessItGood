@@ -13,46 +13,14 @@ struct ContentView: View {
     @StateObject private var speechManager = SpeechManager()
     @State private var isAlertPresented = false
     @State private var solutionText = ""
-    @State private var isAdDisplayed = false
     @State private var isMenuOpen = false // For hamburger menu toggle
+    @State private var playAgainPulse = false
     
     var body: some View {
         ZStack {
             //Main Game View
             VStack {
-                if viewModel.isPlayAgainButtonEnabled {
-                    VStack {
-                        Text("Series Over!")
-                            .font(.largeTitle)
-                            .padding()
-                        Button("Play Again") {
-                            viewModel.handleRestart() // Reset the game
-                        }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.gray.opacity(0.2))
-                } else if isAdDisplayed {
-                    VStack {
-                        Text("Thank you for playing!")
-                            .font(.largeTitle)
-                            .padding()
-                        Button("Close Ad") {
-                            isAdDisplayed = false
-                            viewModel.handleRestart()
-                        }
-                        .padding()
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.black.opacity(0.8))
-                } else { //Main Game View
-                    GeometryReader { geometry in
+                GeometryReader { geometry in
                         VStack(spacing: 0) { // Keep it tight to allow for better spacing adjustments
                             ZStack {
                                 Color(UIColor.white).edgesIgnoringSafeArea(.top)
@@ -177,7 +145,19 @@ struct ContentView: View {
                                 .frame(width: geometry.size.width * 0.31, height: geometry.size.height * 0.04)
                                 .background(Color.red.opacity(!viewModel.checkIfSeriesOver() ? 0.5 : 1.0))
                                 .cornerRadius(10)
-                                .shadow(radius: 3)
+                                .shadow(color: playAgainPulse ? .yellow : .black.opacity(0.3), radius: playAgainPulse ? 10 : 3)
+                                .scaleEffect(playAgainPulse ? 1.1 : 1.0)
+                                .onChange(of: viewModel.isPlayAgainButtonEnabled) { enabled in
+                                    if enabled {
+                                        withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
+                                            playAgainPulse.toggle()
+                                        }
+                                    } else {
+                                        withAnimation {
+                                            playAgainPulse = false
+                                        }
+                                    }
+                                }
                             }
                             .frame(maxWidth: .infinity, alignment: .center)
                             
@@ -192,14 +172,13 @@ struct ContentView: View {
                                     .scaleEffect(geometry.size.width * 0.0017)
                             }
                             .frame(maxWidth: .infinity, alignment: .center)
-                        }
                     }
                 }
             }
         }
         .sheet(isPresented: $viewModel.showWheel) {
-                        WheelView(viewModel: viewModel)
-                    }
+            WheelView(viewModel: viewModel)
+        }
             }
     
             
