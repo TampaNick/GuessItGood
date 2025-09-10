@@ -62,10 +62,10 @@ struct ContentView: View {
                                         ForEach(viewModel.players, id: \ .id) { player in
                                             ZStack {
                                                 RoundedRectangle(cornerRadius: 8)
-                                                    .fill(Color.black.opacity(0.7))
+                                                    .fill(Color.blue)
                                                     .frame(
                                                         width: geometry.size.width * 0.25,
-                                                        height: geometry.size.height * 0.05
+                                                        height: geometry.size.height * 0.07
                                                     )
                                                 VStack {
                                                     Text(player.name.isEmpty ? "Player \(player.id)" : player.name)
@@ -73,8 +73,11 @@ struct ContentView: View {
                                                         .fontWeight(.bold)
                                                         .foregroundColor(.white)
                                                     
-                                                    Text("\(player.totalScore)")
+                                                    Text("\(player.totalScore + player.roundScore)")
                                                         .font(.system(size: geometry.size.width * 0.035))
+                                                        .foregroundColor(.white)
+                                                    Text("Round: \(player.roundScore)")
+                                                        .font(.system(size: geometry.size.width * 0.03))
                                                         .foregroundColor(.white)
                                                 }
                                             }

@@ -19,17 +19,24 @@ import GoogleMobileAds
 class Player: Identifiable, ObservableObject, Equatable {
     let id: Int
     @Published var totalScore: Int = 0
+    @Published var roundScore: Int = 0
     @Published var name: String = ""
+    @Published var gameScores: [Int] = []
     
     static func == (lhs: Player, rhs: Player) -> Bool {
           return lhs.id == rhs.id
       }
     
-    init(id: Int, totalScore: Int = 0, name: String = "") {
+    init(id: Int, totalScore: Int = 0, name: String = "", roundScore: Int = 0, gameScores: [Int] = []) {
         self.id = id
         self.totalScore = totalScore
+        self.roundScore = roundScore
         self.name = name
-        
+        self.gameScores = gameScores
+    }
+
+        func score(forGame index: Int) -> Int? {
+            gameScores.indices.contains(index) ? gameScores[index] : nil
     }
 }
 
@@ -248,7 +255,7 @@ class GameViewModel: ObservableObject {
             currentWheelValue = nil
             if let current = self.currentPlayer,
                let index = self.players.firstIndex(where: { $0.id == current.id }) {
-                self.players[index].totalScore = 0
+            self.players[index].roundScore = 0
             }
             if isSpeechEnabled {
                 speechManager.speak("Bank-ruppt")
@@ -308,7 +315,7 @@ class GameViewModel: ObservableObject {
                         let wheelValue = currentWheelValue ?? 0
                         let letterValue = letterScores[letter] ?? 0
                         let pointsEarned = occurrences * (wheelValue + letterValue)
-                        players[index].totalScore += pointsEarned
+                players[index].roundScore += pointsEarned
                        }
         } else {
             playSound(named: "Buzzer", withExtension: "wav")
@@ -446,11 +453,13 @@ class GameViewModel: ObservableObject {
         print("Game has been reset. Returning to Start Game screen.")
     }
     
-    
     func resetGame() {
         guessedLetters.removeAll()
         pendingLetter = nil
         activeIndices.removeAll()
+        for player in players {
+                    player.roundScore = 0
+                }
         selectRandomPhrase()
         calculateActiveIndices()
         currentPlayerIndex = nextStartingPlayerIndex % players.count
@@ -568,39 +577,52 @@ class GameViewModel: ObservableObject {
                     total + (letterScores[letter] ?? 0)
                 }
             if let currentPlayer = currentPlayer, let index = players.firstIndex(where: {$0.id == currentPlayer.id}) {
-                players[index].totalScore += remainingScore
+                players[index].roundScore += remainingScore
             }
             
             print("Remaining points added: \(remainingScore)")
             if let currentPlayer = currentPlayer {
-                print("Player \(currentPlayerIndex + 1)'s total score: \(currentPlayer.totalScore)")
+                print("Player \(currentPlayerIndex + 1)'s total score: \(currentPlayer.totalScore + currentPlayer.roundScore)")
             }
             guessedLetters = Set(activeIndices.values)
-        //    playSound(named: "Cheering")  //was commented out
-      
+            //    playSound(named: "Cheering")  //was commented out
             
             nextStartingPlayerIndex = (currentPlayerIndex + 1) % players.count
-            if currentGame == totalGames {
-                let winner = players.max(by: { $0.totalScore < $1.totalScore })
-                winnerMessage = "\(winner?.name ?? "Player 1") Wins the Series!"
-                print("Series completed. Winner: \(winnerMessage ?? "No winner")")
+            if let currentPlayer = currentPlayer, let winnerIndex = players.firstIndex(where: { $0.id == currentPlayer.id }) {
+                            for i in players.indices {
+                                players[i].gameScores.append(players[i].roundScore)
+                                if i == winnerIndex {
+                                    players[i].totalScore += players[i].roundScore
+                                }
+                                players[i].roundScore = 0
+                            }
+                
+                if currentGame == totalGames {
+                                   let winner = players.max(by: { ($0.totalScore + $0.roundScore) < ($1.totalScore + $1.roundScore) })
+                                   winnerMessage = "\(winner?.name ?? "Player 1") Wins the Series!"
+                                   print("Series completed. Winner: \(winnerMessage ?? "No winner")")
 
-                if isSpeechEnabled { // Check if speech is enabled before speaking
-                    speechManager.speak("\(winner?.name ?? "Player 1") is the series winner!")
+                                   if isSpeechEnabled { // Check if speech is enabled before speaking
+                                       speechManager.speak("\(winner?.name ?? "Player 1") is the series winner!")
+                                   }
+                               } else {
+                                   currentPlayerIndex = nextStartingPlayerIndex
+                                   print("Next round starts with Player \(currentPlayerIndex + 1).")
                 }
             } else {
                 currentPlayerIndex = nextStartingPlayerIndex
                 print("Next round starts with Player \(currentPlayerIndex + 1).")
             }
+        
 
-            // Use unified end-game flow which also handles ads
-            endGame()
-        } else {
-            print("Incorrect solution! Passing turn to the next player.")
-            playSound(named: "aww")
-            moveToNextPlayer()
-        }
-    }
+        // Use unified end-game flow which also handles ads
+                    endGame()
+                } else {
+                    print("Incorrect solution! Passing turn to the next player.")
+                    playSound(named: "aww")
+                    moveToNextPlayer()
+                }
+            }
     
     
     
