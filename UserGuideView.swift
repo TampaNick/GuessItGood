@@ -15,6 +15,9 @@ struct WebView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
+        // Allow videos to play automatically without user interaction
+              webView.configuration.allowsInlineMediaPlayback = true
+              webView.configuration.mediaTypesRequiringUserActionForPlayback = []
 
         if let filePath = Bundle.main.path(forResource: htmlFileName, ofType: "htm") {
             print("HTML File Path: \(filePath)") // Print the full path of the HTML file
