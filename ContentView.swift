@@ -155,7 +155,7 @@ struct ContentView: View {
                                     viewModel.handleRestart()
                                 }) {
                                     Label("Back", systemImage: "chevron.left")
-                                        .font(.system(size: 20, weight: .semibold))
+                                        .font(.system(size: 20))
                                         .padding(6)
                                         .background(Color.white.opacity(0.6))
                                         .foregroundColor(.black)
@@ -168,6 +168,8 @@ struct ContentView: View {
                                 VStack(spacing: geometry.size.height * 0.005) {
                                     HStack(spacing: geometry.size.width * 0.01) {
                                         Text("Game Sounds")
+                                            .font(.caption)
+                                            .frame(width: geometry.size.width * 0.3, alignment: .trailing)
                                         Toggle("", isOn: $viewModel.isMusicEnabled)
                                             .labelsHidden()
                                             .toggleStyle(SwitchToggleStyle(tint: .blue))
@@ -176,13 +178,16 @@ struct ContentView: View {
 
                                     HStack(spacing: geometry.size.width * 0.01) {
                                         Text("Voice")
+                                            .font(.caption)
+                                            .frame(width: geometry.size.width * 0.3, alignment: .trailing)
                                         Toggle("", isOn: $viewModel.isSpeechEnabled)
                                             .labelsHidden()
                                             .toggleStyle(SwitchToggleStyle(tint: .green))
                                             .scaleEffect(geometry.size.width * 0.0017)
                                     }
                                 }
-                                .padding(.trailing, geometry.size.width * 0.03)
+
+                                Spacer()
                             }
                         }
                     }
