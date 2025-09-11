@@ -113,18 +113,7 @@ struct ContentView: View {
                         
                         VStack(alignment: .leading, spacing: geometry.size.height * 0.01) {
                             Spacer()
-                            Button(action: {
-                                viewModel.handleRestart()
-                            }) {
-                                Label("Back", systemImage: "chevron.left")
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .padding(6)
-                                    .background(Color.white.opacity(0.6))
-                                    .foregroundColor(.black)
-                                    .cornerRadius(5)
-                            }
-                            .padding(.leading, geometry.size.width * 0.03)
-                            
+
                             HStack(spacing: geometry.size.width * 0.03) {
                                 Button("Solve") {
                                     viewModel.initiateSolvePuzzle()
@@ -160,22 +149,45 @@ struct ContentView: View {
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .center)
-                            
-                            // 🔹 Toggles for Sounds & Voice
-                            VStack(spacing: geometry.size.height * 0.005) {
-                                Toggle("Game Sounds", isOn: $viewModel.isMusicEnabled)
-                                    .toggleStyle(SwitchToggleStyle(tint: .blue))
-                                    .scaleEffect(geometry.size.width * 0.0017)
-                                
-                                Toggle("Voice", isOn: $viewModel.isSpeechEnabled)
-                                    .toggleStyle(SwitchToggleStyle(tint: .green))
-                                    .scaleEffect(geometry.size.width * 0.0017)
+
+                            HStack {
+                                Button(action: {
+                                    viewModel.handleRestart()
+                                }) {
+                                    Label("Back", systemImage: "chevron.left")
+                                        .font(.system(size: 20, weight: .semibold))
+                                        .padding(6)
+                                        .background(Color.white.opacity(0.6))
+                                        .foregroundColor(.black)
+                                        .cornerRadius(5)
+                                }
+                                .padding(.leading, geometry.size.width * 0.03)
+
+                                Spacer()
+
+                                VStack(spacing: geometry.size.height * 0.005) {
+                                    HStack(spacing: geometry.size.width * 0.01) {
+                                        Text("Game Sounds")
+                                        Toggle("", isOn: $viewModel.isMusicEnabled)
+                                            .labelsHidden()
+                                            .toggleStyle(SwitchToggleStyle(tint: .blue))
+                                            .scaleEffect(geometry.size.width * 0.0017)
+                                    }
+
+                                    HStack(spacing: geometry.size.width * 0.01) {
+                                        Text("Voice")
+                                        Toggle("", isOn: $viewModel.isSpeechEnabled)
+                                            .labelsHidden()
+                                            .toggleStyle(SwitchToggleStyle(tint: .green))
+                                            .scaleEffect(geometry.size.width * 0.0017)
+                                    }
+                                }
+                                .padding(.trailing, geometry.size.width * 0.03)
                             }
-                            .frame(maxWidth: .infinity, alignment: .center)
+                        }
                     }
                 }
             }
-        }
         .sheet(isPresented: $viewModel.showWheel) {
             WheelView(viewModel: viewModel)
         }
