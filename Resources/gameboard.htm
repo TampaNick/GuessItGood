@@ -7,17 +7,27 @@
     </head>
 <body>
 <p><b><span style="text-transform:uppercase">The Gameboard</span>:</b></p>
-<p>The game board section has a header section, a gameboard, a custom keyboard and buttons to solve the puzzle, play a new round of games or toggle the game sounds and voice prompts on or off.</p>
-<p><img width="142" height="307" src="GIG-Gameboard.png" align="left" hspace="12" alt="Game Board"></p>
+<p>The game board section has a header section, a gameboard, a custom keyboard and other buttons to solve the puzzle, play a new round of games or toggle the game sounds and voice prompts on or off.  There is also a Back button that can return you to the start screen. Each player arrives at the gameboard screen after spinning the game wheel.</p>
+<p><img width="284" height="614" src="GIG-Gameboard.png" align="left" hspace="12" alt="Game Board"></p>
 <p><b><span style="text-transform:uppercase">The Features:</span></b></p>
 <p><b>Header section:</b></p>
-<p>At the top of the header section, you'll find the players' names and scores.&nbsp; Each time a player gets a letter right they score points that are tallied in this section.</p>
-<p>Just below the scores is a message about who's turn it is and just below that is the Category hint about the phrase you are trying to solve. There is a game voice who we fondly call MC (master of ceremonies). MC will give you verbal announcements about Categories, letters, number of letters and the series winner.&nbsp; These voice announcements can be turned off if you so desire, by clicking the green Voice toggle.</p>
-<p>The custom keyboard has blue keys when not guessed, has orange keys when pressed and have grey keys after Enter is pressed.&nbsp;</p>
-<p>Each correct letter guess earns 250 points for each correct letter, except for vowels. Each vowel takes away 10 points if selected. Correct guesses allow the player to keep guessing until they are wrong or solve the puzzle.&nbsp; When a player guesses wrong, the turn passes on to the next player.</p>
-<p><span style="text-transform:uppercase"><b>Gameboard section:</b></span><img width="128" height="278" src="image004.jpg" align="left" hspace="12" alt="Solve Puzzle Pop-Up"></p>
+<p>At the top of the header section, you'll find the players' names and scores.&nbsp; Each player has a blue score box which contains their name, their  cumulative score and their current Round score. Each time a player gets a letter right they score points that are tallied in the Round row. The Round row is tallied for all correct guesses for that current round.  When the round's puzzle is solved, the highest scoring player will have these Round points added to any existing Cumulative score. The round score is reset to zero for all players once a round winner is announced.</p>
+<p><b>Who's turn is it?</b></p>
+<p>Just below the scores is a message text that tracks and reports the current player's name.</p>
+<p><b>CLUE</b></p>
+<p>Just below that text is a hidden Category text (CLUE) that will appear if a player lands on the "CLUE" space on the game wheel. The game announcer will give you verbal announcements about Categories, letters, number of letters and the series winner.&nbsp; These voice announcements can be turned off if you so desire, by clicking the green Voice toggle at the bottom of the gamebaord screen.</p>
+<p><b>CUSTOM KEYBOARD</b></p>
+<p>The custom keyboard has blue keys when not guessed, has orange keys when pressed and have grey keys after the "Enter" key is pressed.&nbsp;</p>
+<p>After spinning the game wheel, you are brought to the gambeboard screen. </p>
+<p><b>SCORING</b></p>
+<p>First, a little explanation about scoring.  Scoring is recorded on the game board screen.  On that screen, you will see the players names, their cumulative scores and their "Round" scores in three lines in each person's blue scoring box at the top of the screen.  The Cumulative score is the total points of all winning rounds for that player. The Round score is the current score for the round being played. At the end of the series, after all rounds have been played, the highest Cumulative points scorer is the overall series winner.</p>
+<p> <b>VOWELS & CONSONANTS</b></p>
+<p> Scoring is applied differently if you guess a vowel versus a consonant. If the value of the slice is a number, then during that turn, you will earn that number of points, times the number of occurances of the letter you guessed that are present in the puzzle. Each vowel has a relatively large negative value of minus 400 points.  Each consonant has no added value. So if you choose to search for a vowel, then this negative amount, times the occurances of the chosen vowel in the puzzle, is subtracted from your wheel sum for that spin. For example, let's say your spin fell on 700 and you guessed letter "A". Being a vowel, it has a value of minus 400. If there are 4 A's in the puzzle, then your vowel value adds up to 4 x -400 or -1600 points. Since there were 4 vowels, you also get positive 700 (the wheel value) times the 4 occurences of the letter, or 2800 points.  The sum for that turn turn is then 2800 - 1600 or +800 points.</p>
+<p> Scoring is tallied through all the turns of each game played.  When a round is over and that round's puzzle is solved, the winner of that round will be the player with the most points for that round. The winning player's round score will be added to their previous cumulative score. All other players round scores will not add to their cumulative score and prior to the start of the next round all players round scores will be reset to zero.</p>
+<p> Correct guesses allow the player to keep guessing until they are wrong or solve the puzzle.&nbsp; When a player guesses wrong, the turn passes on to the next player.</p>
+<p><span style="text-transform:uppercase"><b>SOLVING:</b></span><img width="284" height="614" src="GIG-Gameboard.png" align="left" hspace="12" alt="Solve Puzzle Pop-Up"></p>
 <p>After the first correct guess, anytime a player thinks they can solve the puzzle when it's their turn, they would press the green Solve Button. This opens up a field where you can type or speak your guess. You then check, correct and submit your guessed phrase. If correct, you get all of the points for unguessed letters and do not lose points for any vowels remaining. If there are more games to play, the game will automatically load them as they are solved.&nbsp;</p>
-<p>The player with the highest score after all puzzles are solved is the series <img width="129" height="281" src="image005.jpg" align="right" hspace="12">winner. And it's easy to see who has the most points because the game records them for you.&nbsp; The game announcer will also speak out a message to congratulate the winner by name. To play again, press the now activated, red Play Again button.</p>
+
 <p>Have Fun and thanks for playing!</p>
 </body>
 </html>

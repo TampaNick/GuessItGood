@@ -117,13 +117,7 @@ class GameViewModel: ObservableObject {
     }
     //This may still be needed to calculate score.
     private let letterScores: [Character: Int] = [
-            "A": -10, "E": -10, "I": -10, "O": -10, "U": -10,
-            "L": 250, "N": 250, "R": 250, "S": 250, "T": 250,
-            "D": 250, "G": 250,
-            "B": 250, "C": 250, "M": 250, "P": 250,
-            "F": 250, "H": 250, "V": 250, "W": 250, "Y": 250,
-            "K": 250, "J": 250, "X": 250,
-            "Q": 250, "Z": 250
+            "A": -400, "E": -400, "I": -400, "O": -400, "U": -400
         ]
     
     private var phrases: [Phrase] = []
@@ -142,26 +136,6 @@ class GameViewModel: ObservableObject {
         audioPlayer = nil
     }
     
-    /*
-    // TEMPORARY hard coded phrase to test UI of puzzleboard etc UI.
-    private func selectRandomPhrase() {
-     // Temporarily hard-code the phrase for debugging
-     phrase = "A journey of a thousand miles begins with a single step"
-     category = "Debug Category"
-     
-     // Optionally, include speech for debugging purposes
-     if isSpeechEnabled {
-     speechManager.speak("The category is \(category).")
-     }
-     
-     // Stop sound to ensure no conflict with debugging
-  //  stopSound()
-     
-     print("Phrase is: \(phrase), Category is: \(category)") // Debug Statement
-     }
-
-    //END hard coded phrase
-     */
     private func selectRandomPhrase() {
             if let randomPhrase = phrases.randomElement() {
                 phrase = randomPhrase.phrase.uppercased()
@@ -313,7 +287,7 @@ class GameViewModel: ObservableObject {
             if let currentPlayer = currentPlayer,
                         let index = players.firstIndex(where: { $0.id == currentPlayer.id }) {
                         let wheelValue = currentWheelValue ?? 0
-                        let letterValue = letterScores[letter] ?? 0
+                        let letterValue = letterScores[letter] ?? 0 //letterScores is only Vowels (-400 for each)
                         let pointsEarned = occurrences * (wheelValue + letterValue)
                 players[index].roundScore += pointsEarned
                        }
