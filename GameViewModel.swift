@@ -510,16 +510,35 @@ class GameViewModel: ObservableObject {
     }
     
     
-    
     func selectPendingLetter(_ letter: Character) {
-        pendingLetter = letter
-        if isSpeechEnabled { // Check if speech is enabled before speaking
-            speechManager.speak("\(letter).")
+            // 1. Check if the letter is a vowel
+            let vowels: Set<Character> = ["A", "E", "I", "O", "U"]
+            let isAttemptingVowel = vowels.contains(letter)
+            
+            // 2. Check the current player's score
+            if let currentScore = currentPlayer?.roundScore, isAttemptingVowel {
+                if currentScore < 25 {
+                    // 3. Block the guess and speak the warning
+                    if isSpeechEnabled {
+                        speechManager.speak("You can't buy vowels with less than 25 points. Please try any other letter that is not a vowel.")
+                    }
+                    
+                    // We return immediately so 'pendingLetter' is NOT set,
+                    // and the confirmation logic never runs.
+                    return
+                }
+            }
+
+            // 4. If it's a consonant, or a vowel they CAN afford, proceed as normal
+            pendingLetter = letter
+            
+            if isSpeechEnabled {
+                speechManager.speak("\(letter).")
+            }
+            stopSound()
         }
-        stopSound()
-    }
     
-    
+  
     func initiateSolvePuzzle() {
         let correctGuessesExist = activeIndices.values.contains { guessedLetters.contains($0) }
         if !correctGuessesExist {
