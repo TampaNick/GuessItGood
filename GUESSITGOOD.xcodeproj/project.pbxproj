@@ -352,7 +352,7 @@
 				CODE_SIGN_ENTITLEMENTS = GUESSITGOOD/GUESSITGOOD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				"COPY_PHASE_STRIP[sdk=*]" = YES;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				"DEBUG_INFORMATION_FORMAT[sdk=*]" = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"GUESSITGOOD/Preview Content\"";
 				DEVELOPMENT_TEAM = R5986NP344;
@@ -370,7 +370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NOlivieri.GUESSITGOOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -392,7 +392,7 @@
 				CODE_SIGN_ENTITLEMENTS = GUESSITGOOD/GUESSITGOOD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				"COPY_PHASE_STRIP[sdk=*]" = YES;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"GUESSITGOOD/Preview Content\"";
 				DEVELOPMENT_TEAM = R5986NP344;
 				ENABLE_PREVIEWS = YES;
@@ -409,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NOlivieri.GUESSITGOOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
