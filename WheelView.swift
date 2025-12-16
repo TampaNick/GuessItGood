@@ -12,7 +12,7 @@ struct WheelView: View {
                (.yellow, "400"),
                (.brown, "LOSE A TURN"),
                (.purple, "600"),
-               (.pink, "700"),
+               (.cyan, "700"),
                (.gray, viewModel.clueUsed ? "1000" : "CLUE"),
                (.orange, "500"),
                (.black, "BANKRUPT")

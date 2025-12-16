@@ -117,7 +117,7 @@ class GameViewModel: ObservableObject {
     }
     //This may still be needed to calculate score.
     private let letterScores: [Character: Int] = [
-            "A": -400, "E": -400, "I": -400, "O": -400, "U": -400
+            "A": -25, "E": -25, "I": -25, "O": -25, "U": -25
         ]
     
     private var phrases: [Phrase] = []
@@ -280,17 +280,33 @@ class GameViewModel: ObservableObject {
         let occurrences = activeIndices.values.filter { $0 == letter }.count
 
         if occurrences > 0 {
-            playSound(named: "Ding")
-            if isSpeechEnabled { // Check if speech is enabled before speaking
-                speechManager.speak("\(occurrences) \(occurrences == 1 ? "letter" : "letters") \(letter).")
-            }
-            if let currentPlayer = currentPlayer,
-                        let index = players.firstIndex(where: { $0.id == currentPlayer.id }) {
+                    playSound(named: "Ding")
+                    if isSpeechEnabled { // Check if speech is enabled before speaking
+                        speechManager.speak("\(occurrences) \(occurrences == 1 ? "letter" : "letters") \(letter).")
+                    }
+                    if let currentPlayer = currentPlayer,
+                       let index = players.firstIndex(where: { $0.id == currentPlayer.id }) {
+                        
                         let wheelValue = currentWheelValue ?? 0
-                        let letterValue = letterScores[letter] ?? 0 //letterScores is only Vowels (-400 for each)
-                        let pointsEarned = occurrences * (wheelValue + letterValue)
-                players[index].roundScore += pointsEarned
-                       }
+                        let isVowel = letterScores[letter] != nil // Check if the letter is in the dictionary (i.e., a vowel with a score)
+                        
+                        let scorePerOccurrence: Int
+                        
+                        if isVowel {
+                            // 1. VOWEL GUESS: Penalty of -25 per occurrence. Wheel value is ignored.
+                            scorePerOccurrence = letterScores[letter] ?? -25 // Should be -25, but use the dictionary value just in case
+                        } else {
+                            // 2. CONSONANT GUESS: Award points equal to the wheel value.
+                            scorePerOccurrence = wheelValue
+                        }
+                        
+                        let pointsEarned = occurrences * scorePerOccurrence
+                        players[index].roundScore += pointsEarned
+                        
+                        // Add debug print for clarity
+                        print("Letter: \(letter), Occurrences: \(occurrences), Wheel Value: \(wheelValue), Score Change: \(pointsEarned)")
+                    }
+                       
         } else {
             playSound(named: "Buzzer", withExtension: "wav")
             if isSpeechEnabled { // Check if speech is enabled before speaking
