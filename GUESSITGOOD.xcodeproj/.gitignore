@@ -1,0 +1,24 @@
+# ==================================
+# Xcode and Swift Project Exclusions
+# ==================================
+
+# Build products
+build/
+DerivedData/
+
+# Project and Workspace settings (User-specific files)
+# THIS FIXES UserInterfaceState.xcuserstate ERROR
+*.xcodeproj/*.pbxuser
+!default.pbxuser
+*.xcworkspace/*.xcuserdatad
+!default.xcuserdatad
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+project.xcworkspace/xcuserdata/ # Explicitly ignore the workspace user data
+
+# Swift Package Manager (SPM) files
+.swiftpm/
+
+# Carthage and CocoaPods directories (if used)
+Carthage/Build
+Pods/
